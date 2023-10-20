@@ -30,12 +30,67 @@
     <link rel="stylesheet" href="./style.css" />
 </head>
 
-<body>
-
+<body data-bs-spy="scroll" data-bs-target="#navbar_id">
+    <noscript>Tarayıcınızın Javascripti Kapalı Lütfen Aktif ediniz</noscript>
     <!-- start codes -->
 
-    <!-- <h1 class="text-primary">Tutorials</h1>
-    <i class="fa-solid fa-user"></i> -->
+    <!-- start nav codes -->
+    <nav id="navbar_id" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container"> <!-- container-fluid -->
+            <a class="navbar-brand" href="index.html"><i class="fa-solid fa-blog"></i></a>
+            <!-- Buttonda redirect yap -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" aria-current="page">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Action 1</a>
+                            <a class="dropdown-item" href="#">Action 2</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" type="text" placeholder="Arama için ...">
+                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Ara</button> <!-- btn-outline-success -->
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav codes -->
+
+    <!-- start header codes-->
+    <header id="header_id">
+        <div class="text-white">
+            <div class="container text-center">
+                <div class="p-5 text-uppercase display-4">Frontend Eğitimimize Hoşgeldiniz</div>
+                <h4>Html5 Css3 Js React</h4>
+                <a href="" class="btn btn-primary">Linkedin</a>
+                <a href="" class="btn btn-danger">Blog</a>
+                <a href="https://www.youtube.com/" target="_blank" class="btn btn-success">Youtube</a>
+            </div>
+        </div>
+    </header>
+    <!-- end header codes -->
+
+    <!-- start main codes -->
+    <main id="main_id"></main>
+    <!-- end main codes -->
+
+    <!-- start footer codes -->
+    <footer id="footer_id"></footer>
+    <!-- end footer codes -->
 
     <!-- end codes -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
