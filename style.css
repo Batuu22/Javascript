@@ -7,6 +7,9 @@ version : v.1
 
 /*################################################################*/
 /* Root */
+:root{
+    --templateBgColor:rgb(31, 32, 33);
+}
 
 
 /*################################################################*/
@@ -100,6 +103,13 @@ i{
 }
 
 /*################################################################*/
+
+/* Navbar */
+.dark_mode{
+    background-color: var(--templateBgColor);
+    color: #fff;
+}
+
 /* Header */
 header{
     background-image: url("./img/header.jpg");
@@ -109,6 +119,24 @@ header{
     z-index: -1;
     height: 80vh;
     padding-top: 4rem;
+}
+
+/* Footer */
+footer{
+    min-height: 10rem;
+    width: auto;
+}
+
+/* backtotop */
+#back_top{
+    position: fixed;
+    display: block;
+    right: 3px;
+    bottom: 2px;
+}
+
+#back_top:hover{
+    opacity: 0.9;
 }
 
 
