@@ -63,24 +63,39 @@ i{
     clear: both;
 }
 
+.myHeading{
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-shadow: 0.4px -0.9px rgba(0,0,0,0.9);
+    opacity: 0.7;
+}
+
 /* My Special Size */
 .fsize1{
-    font-size: 1rem; /* 15*1 */
+    font-size: 1rem; /* 20*1 */
 }
 
 .fsize2{
-    font-size: 2rem; /* 15*2 */
+    font-size: 2rem; /* 20*2 */
 }
 
 .fsize3{
-    font-size: 3rem; /* 15*3 */
+    font-size: 3rem; /* 20*3 */
 }
 
 .fsize4{
-    font-size: 4rem; /* 15*4 */
+    font-size: 4rem; /* 20*4 */
 }
 
 /* line-clamp CSS3 */
+.line-clamp4{
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    overflow:hidden;
+}
+
 .line-clamp5{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
@@ -102,6 +117,13 @@ i{
     overflow: hidden;
 }
 
+.line-clamp20{
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 20;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
 /*################################################################*/
 
 /* Navbar */
@@ -119,6 +141,31 @@ header{
     z-index: -1;
     height: 80vh;
     padding-top: 4rem;
+}
+
+/* Messages */
+#messages{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+#messages i{
+    font-size: 5rem;
+    color: #00f;
+}
+
+/* Parallax */
+#parallax{
+    background-color: transparent;
+    background-image: url("./img/parallax.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35rem;
+    padding: 2rem;
+    background-attachment:fixed;
+}
+
+#parallax h2,p{
+    color: #fff;
 }
 
 /* Footer */
