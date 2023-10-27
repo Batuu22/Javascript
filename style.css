@@ -56,6 +56,10 @@ i{
     font-size: 1.5rem;
 }
 
+p{
+    color: #000!important;
+}
+
 /* Çok Önemli !!! clearfix */
 .my_clearfix::after{
     content:"";
@@ -117,6 +121,13 @@ i{
     overflow: hidden;
 }
 
+.line-clamp15{
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 15;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
 .line-clamp20{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 20;
@@ -143,6 +154,16 @@ header{
     padding-top: 4rem;
 }
 
+/* Tags */
+#tags{
+    margin-left: 20rem;
+}
+
+/* user_id */
+#user_id{
+    font-size: 2rem;
+}
+
 /* Messages */
 #messages{
     margin-top: 2rem;
@@ -151,6 +172,10 @@ header{
 #messages i{
     font-size: 5rem;
     color: #00f;
+}
+
+#messages> .container > .row> .text-center> p{
+    color: #000!important;
 }
 
 /* Parallax */
@@ -165,7 +190,22 @@ header{
 }
 
 #parallax h2,p{
-    color: #fff;
+    color: #fff!important;
+}
+
+/* Newspaper */
+#newspaper{
+    height: 30rem;
+    padding: 2rem;
+}
+
+#newspaper p{
+    color: #000!important;
+    text-align: justify;
+}
+
+#blog{
+    background-color: #b5b8ff;
 }
 
 /* Footer */
