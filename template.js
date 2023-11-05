@@ -23,3 +23,4 @@ let newDate = () => {
     // $("#date_id").html(new Date().getFullYear());
 }
 newDate();
+
