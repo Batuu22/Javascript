@@ -125,35 +125,78 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 // String Metodlar
 
-let strMethod=()=>{
-    let text = "Merhaba Ben Javascript Öğreniyorum";
+// let strMethod=()=>{
+//     let text = "Merhaba Ben Javascript Öğreniyorum";
 
-    console.log(text.length);
-    console.log(text.length-1); // => toplam kaç indeksden oluştugunu verir.
-    console.log(text.slice(1));
-    console.log(text.slice(0,4));
-    console.log(text.substring(0));
-    console.log(text.substring(3,5));
-    console.log(text.indexOf("t"));
-    console.log(text.charAt(4));
-    console.log(text.includes("z"));
-    console.log(text.startsWith("M"));
-    console.log(text.endsWith("a"));
-    console.log(text.toLowerCase());
-    console.log(text.toUpperCase());
-    console.log(text.replace("Merhaba","Selam"));
-    console.log(text.lastIndexOf("a"));
-    console.log(text.repeat(2));
-    console.log(text.concat(" ve bu ilk dersim")); // => sona değer ekler.
-    console.log(text.trim());
-    console.log(text.trimStart());
-    console.log(text.trimEnd());
-}
-strMethod();
+//     console.log(text.length);
+//     console.log(text.length-1); // => toplam kaç indeksden oluştugunu verir.
+//     console.log(text.slice(1));
+//     console.log(text.slice(0,4));
+//     console.log(text.substring(0));
+//     console.log(text.substring(3,5));
+//     console.log(text.indexOf("t"));
+//     console.log(text.charAt(4));
+//     console.log(text.includes("z"));
+//     console.log(text.startsWith("M"));
+//     console.log(text.endsWith("a"));
+//     console.log(text.toLowerCase());
+//     console.log(text.toUpperCase());
+//     console.log(text.replace("Merhaba","Selam"));
+//     console.log(text.lastIndexOf("a"));
+//     console.log(text.repeat(2));
+//     console.log(text.concat(" ve bu ilk dersim")); // => sona değer ekler.
+//     console.log(text.trim());
+//     console.log(text.trimStart());
+//     console.log(text.trimEnd());
+// }
+// strMethod();
 
+////////////////////////////////////////////////////////////////////////////////////////
+// Functions
+// 1-) Normal functions
 
+// parametresiz returnsuz
+// function toplama(){
+//     console.log(5+7);
+// }
+// toplama();
 
+//parametresiz returnlu
+//  function carpma(){
+//      var s1=2,s2=3;
 
+//      return s1*s2;
+//  }
+//  let sonuc1=carpma();
+//  console.log(sonuc1);
 
+//parametreli returnlu
 
+//  function bolme(num1,num2){
+//      return num1/num2;
+//  }
+//  let sonuc2=bolme(9,3);
+//  console.log(sonuc2);
 
+////////////////////////////////////////////////////////////////////////////////////////
+// 2-) Anonymous functions
+// let value=function(){
+//     console.log("anonim fonksiyonu");
+// }
+// value();
+
+// let deger=function(){
+//     console.log("anonim fonksiyon");
+// }
+// deger();
+////////////////////////////////////////////////////////////////////////////////////////
+
+// 3-) Arrow functions
+// let toplam=(num1,num2,num3,num4)=>{
+//     return num1+num2+num3+num4;
+// }
+// console.log(toplam(1,2,3,4));
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// 4-) Immedia functions()()
