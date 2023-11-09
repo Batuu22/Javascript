@@ -199,5 +199,32 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
-// 4-) Immedia functions()()
+// 4-) Immedia functions()()        // => fonksiyonu çağırmadan direk çalışmasını istersek immedia function kullanabiliriz.
+// (function deneme1(){
+//     console.log("Immedia fonksiyonu");
+// })();
 
+function deneme1(){
+    console.log("normal fonksiyon");
+}
+deneme1();
+
+let deneme2=function(){
+    console.log("anonim fonksiyon");
+}
+deneme2();
+
+let deneme3=()=>{
+    console.log("arrow function");
+}
+deneme3();
+
+(function deneme4(){
+    console.log("ımmedia function");
+})();
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+//condition
+//loop
+//Ornekler

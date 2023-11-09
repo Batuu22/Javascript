@@ -17,15 +17,15 @@
 
 
 // çözümü...
-let inpWord=prompt("bir kelime giriniz");
-console.log(inpWord.length);
-console.log(inpWord.trim().length);
-console.log(inpWord.toLowerCase());
-console.log(inpWord.toUpperCase());
-let inpAltWord=inpWord.replace(inpWord.substring(0,inpWord.indexOf(" ")),"javascript")
-console.log(inpAltWord);
-console.log(inpAltWord.startsWith("javascript"));
-console.log(inpAltWord.endsWith("javascript"));
-console.log(inpAltWord.charAt(0));
-console.log(inpWord.concat("ben js öğreniyorum"));
-console.log(inpWord.slice(0,4));
+// let inpWord=prompt("bir kelime giriniz");
+// console.log(inpWord.length);
+// console.log(inpWord.trim().length);
+// console.log(inpWord.toLowerCase());
+// console.log(inpWord.toUpperCase());
+// let inpAltWord=inpWord.replace(inpWord.substring(0,inpWord.indexOf(" ")),"javascript")
+// console.log(inpAltWord);
+// console.log(inpAltWord.startsWith("javascript"));
+// console.log(inpAltWord.endsWith("javascript"));
+// console.log(inpAltWord.charAt(0));
+// console.log(inpWord.concat("ben js öğreniyorum"));
+// console.log(inpWord.slice(0,4));
