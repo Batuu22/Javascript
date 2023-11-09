@@ -86,7 +86,7 @@
 //     console.log(cikanSonuc);
 //     var comparisonDeger = Math.min(sqrt, cikanSonuc);
 //     console.log(comparisonDeger);
-    
+
 //     // karsilaştırma ternary operator
 //     (comparisonDeger % 2 == 0) ? comparisonDeger = comparisonDeger + 5 : comparisonDeger = comparisonDeger + 3;
 //     console.log(comparisonDeger);
@@ -199,32 +199,93 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
-// 4-) Immedia functions()()        // => fonksiyonu çağırmadan direk çalışmasını istersek immedia function kullanabiliriz.
+// 4-) Immedia functions()()        // => fonksiyonu çağırmadan direk çalışmasını istersek immedia function kullanırız.
 // (function deneme1(){
 //     console.log("Immedia fonksiyonu");
 // })();
 
-function deneme1(){
-    console.log("normal fonksiyon");
-}
-deneme1();
+// function deneme1(){
+//     console.log("normal fonksiyon");
+// }
+// deneme1();
 
-let deneme2=function(){
-    console.log("anonim fonksiyon");
-}
-deneme2();
+// let deneme2=function(){
+//     console.log("anonim fonksiyon");
+// }
+// deneme2();
 
-let deneme3=()=>{
-    console.log("arrow function");
-}
-deneme3();
+// let deneme3=()=>{
+//     console.log("arrow function");
+// }
+// deneme3();
 
-(function deneme4(){
-    console.log("ımmedia function");
+// (function deneme4(){
+//     console.log("ımmedia function");
+// })();
+
+////////////////////////////////////////////////////////////////////////////////////////
+//condition
+// ÖDEV: 
+// 1-Kullanıcı tarafından girilen bir sayının negatif mi, pozitif mi ? bunu yazan JS code yazınız.
+// (Dikkat: normal  function ile yazınız)
+
+// 2-Kullanıcı tarafından girilen bir sayının tek mi, çift mi olduğunu yazan JS code yazınız.
+// (Dikkat:anonymous function ve ternary ile yazınız)
+
+// 3-Kullanıcıdan alınan sayıya göre Haftanın günlerini switch-case ile JS code yazınız?
+// Örneğin: kullanıcı 1 girdi: 1=pazartesi yazacak
+
+//1-)
+// function negpos(){
+//     let inpData=Number(prompt("bir sayi giriniz"));
+//     if(inpData<0){
+//         console.log("Negatiftir");
+//     }
+//     else{
+//         console.log("pozitiftir");
+//     }
+// }
+// negpos();
+
+//2-)
+// let oddeven=function(){
+//     let number=parseInt(prompt("bir sayi giriniz"));
+//     let result=(number%2==0)?"çifttir":"tektir";
+//     console.log(result);
+// }
+// oddeven();
+
+//3-)
+// immedia function ile yaptık...
+(function days() { 
+    const input = Number(prompt("1-7 arasında bir sayi giriniz"));
+    switch (input) {
+        case 1:
+            console.log("Pazartesi");
+            break;
+        case 2:
+            console.log("Salı");
+            break;
+        case 3:
+            console.log("Çarşamba");
+            break;
+        case 4:
+            console.log("perşembe");
+            break;
+        case 5:
+            console.log("cuma");
+            break;
+        case 6:
+            console.log("cumartesi");
+            break;
+        case 7:
+            console.log("pazar");
+            break;
+        default:
+            console.log("1-7 Arasında sayi girmediniz");
+    }
 })();
 
 ////////////////////////////////////////////////////////////////////////////////////////
-
-//condition
 //loop
 //Ornekler
