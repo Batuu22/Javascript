@@ -257,35 +257,81 @@
 
 //3-)
 // immedia function ile yaptık...
-(function days() { 
-    const input = Number(prompt("1-7 arasında bir sayi giriniz"));
-    switch (input) {
-        case 1:
-            console.log("Pazartesi");
-            break;
-        case 2:
-            console.log("Salı");
-            break;
-        case 3:
-            console.log("Çarşamba");
-            break;
-        case 4:
-            console.log("perşembe");
-            break;
-        case 5:
-            console.log("cuma");
-            break;
-        case 6:
-            console.log("cumartesi");
-            break;
-        case 7:
-            console.log("pazar");
-            break;
-        default:
-            console.log("1-7 Arasında sayi girmediniz");
-    }
-})();
+// (function days() { 
+//     const input = Number(prompt("1-7 arasında bir sayi giriniz"));
+//     switch (input) {
+//         case 1:
+//             console.log("Pazartesi");
+//             break;
+//         case 2:
+//             console.log("Salı");
+//             break;
+//         case 3:
+//             console.log("Çarşamba");
+//             break;
+//         case 4:
+//             console.log("perşembe");
+//             break;
+//         case 5:
+//             console.log("cuma");
+//             break;
+//         case 6:
+//             console.log("cumartesi");
+//             break;
+//         case 7:
+//             console.log("pazar");
+//             break;
+//         default:
+//             console.log("1-7 Arasında sayi girmediniz");
+//     }
+// })();
 
 ////////////////////////////////////////////////////////////////////////////////////////
 //loop
+//while
+// let i = 1;
+// while (i < 4) {
+//     console.log("Merhaba Js");
+//     i++;
+// }
+
+// //for
+// for(let i=1;i<=10;i++){
+//     console.log(i);
+// }
+
+//do-while
+// let i=1;
+// do{
+//     console.log(i);
+//     i++
+// }while(i<=5);
+
+//iterative for
+// let iterativeFor=()=>{
+//     let dizi=[123,212,224,42,52,"batuhan",3.5,{cattle:"cow"},[32,2]];
+//     for(let i=0;i<dizi.length;i++){
+//         console.log(dizi[i]);
+//     }
+// }
+// iterativeFor();
+
+//for in(index) => data indexs/indis değerlerini döndürür.
+const dizi=[32,21,34,45,123];
+// for(data in dizi){
+//     console.log(data);
+// }
+
+//for of(index) => indekslerin tuttuğu değerleri döndürür.
+// for(data2 of dizi){
+//     console.log(data2);
+// }
+
+// forEach
+// dizi.forEach(data3=>{
+//     console.warn(data3);
+// })
+
+
+////////////////////////////////////////////////////////////////////////////////////////
 //Ornekler
