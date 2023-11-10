@@ -89,4 +89,4 @@ let example=()=>{
         console.log(`Genel Toplamları => ${genelToplam}`); // => interpolation yapısı
     }
 }
-// example();
+ //example();
