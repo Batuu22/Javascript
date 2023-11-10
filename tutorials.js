@@ -361,4 +361,4 @@ const debugData=()=>{
     }
     console.log(toplam);
 }
-debugData();
+//debugData();
