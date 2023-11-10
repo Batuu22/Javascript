@@ -317,7 +317,7 @@
 // iterativeFor();
 
 //for in(index) => data indexs/indis değerlerini döndürür.
-const dizi=[32,21,34,45,123];
+//const dizi=[32,21,34,45,123];
 // for(data in dizi){
 //     console.log(data);
 // }
@@ -332,6 +332,33 @@ const dizi=[32,21,34,45,123];
 //     console.warn(data3);
 // })
 
-
 ////////////////////////////////////////////////////////////////////////////////////////
 //Ornekler
+
+////////////////////////////////////////////////////////////////////////////////////////
+//try-catch(error-handling);
+
+let tryCatchTuto=()=>{
+    try{
+        alertx("pop-up");
+    }catch(error){
+        console.error(error);
+    }
+    finally{
+        console.log("her zaman çalışır");
+        console.log("db.close");
+    }
+    
+}
+// tryCatchTuto();
+////////////////////////////////////////////////////////////////////////////////////////
+//debug Nedir ?
+const debugData=()=>{
+    // 1 den 10'a kadar olan 1-10 dahil sayıların toplamı ?
+    let toplam = 0;
+    for(let i=1;i<=10;i++){
+        toplam += i;
+    }
+    console.log(toplam);
+}
+debugData();
