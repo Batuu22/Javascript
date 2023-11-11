@@ -122,8 +122,8 @@ let example2=()=>{
                 }
                 genelToplam=tekToplam+ciftToplam;
             }
-        }
+        } //end for
         console.log(`Genel Toplam => ${genelToplam}`);
     }
-}
+} //end function
 //example2();
