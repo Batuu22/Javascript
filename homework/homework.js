@@ -47,46 +47,83 @@
 // Dikkat: Bu algoritmayı Arrow Function ile yapalım.
 // (Clean code kuralları çercevesinde ) algoritma yapan JS program?
 
-let example=()=>{
-    let bitisSayisi=Number(prompt("bitiş sayısını giriniz"));
+// let example=()=>{
+//     let bitisSayisi=Number(prompt("bitiş sayısını giriniz"));
+//     if(bitisSayisi==44){
+//         alert("sistemden çıkılıyor");
+//     }
+//     else if(bitisSayisi>50){
+//         let genelToplam=0, ciftSayiAdet=0,ciftToplam=0,tekSayiAdet=0,tekToplam=0;
+//         for(let i=1;i<=50;i++){
+//             if(i%2==0){
+//                 ciftSayiAdet=ciftSayiAdet+1
+//                 ciftToplam=ciftToplam+i
+//                 console.log("cift Sayilar =>" + i + "Cift Sayi adeti =>" + ciftSayiAdet + "ciftSayiToplamlari =>" + ciftToplam);
+//             }
+//             else{
+//                 tekSayiAdet=tekSayiAdet+1
+//                 tekToplam=tekToplam+i
+//                 console.log("tek Sayilar =>" + i + "Tek Sayi adeti =>" + tekSayiAdet + "tekSayiToplamlari =>" + tekToplam);
+//             }
+//             genelToplam=genelToplam+i;
+//         }
+//         console.log(`Genel Toplamları => ${genelToplam}`); // => interpolation yapısı
+//     }
+//     else{
+//         let genelToplam=0, ciftSayiAdet=0,ciftToplam=0,tekSayiAdet=0,tekToplam=0;
+//         for(let i=1;i<=bitisSayisi;i++){
+//             if(i%2==0){
+//                 ciftSayiAdet=ciftSayiAdet+1
+//                 ciftToplam=ciftToplam+i
+//                 console.log("cift Sayilar =>" + i + "Cift Sayi adeti =>" + ciftSayiAdet + "ciftSayiToplamlari =>" + ciftToplam);
+//             }
+//             else{
+//                 tekSayiAdet=tekSayiAdet+1
+//                 tekToplam=tekToplam+i
+//                 console.log("tek Sayilar =>" + i + "Tek Sayi adeti =>" + tekSayiAdet + "tekSayiToplamlari =>" + tekToplam);
+//             }
+//             genelToplam=genelToplam+i;
+//         }
+//         console.log(`Genel Toplamları => ${genelToplam}`); // => interpolation yapısı
+//     }
+// }
+ //example();
+///////////////////////
+ // the other way
+let example2=()=>{
+    let genelToplam=0;
+    let ciftSayiAdet=0;
+    let ciftToplam=0;
+    let tekToplam=0;
+    let tekSayiAdet=0;
+
+    let bitisSayisi=Number(prompt("bitis sayısını giriniz"));
     if(bitisSayisi==44){
-        alert("sistemden çıkılıyor");
+        alert("Sistemden çıkılıyor");
     }
-    else if(bitisSayisi>50){
-        let genelToplam=0, ciftSayiAdet=0,ciftToplam=0,tekSayiAdet=0,tekToplam=0;
-        for(let i=1;i<=50;i++){
-            if(i%2==0){
-                
-                ciftSayiAdet=ciftSayiAdet+1
-                ciftToplam=ciftToplam+i
-                console.log("cift Sayilar =>" + i + "Cift Sayi adeti =>" + ciftSayiAdet + "ciftSayiToplamlari =>" + ciftToplam);
-            }
-            else{
-                tekSayiAdet=tekSayiAdet+1
-                tekToplam=tekToplam+i
-                console.log("tek Sayilar =>" + i + "Tek Sayi adeti =>" + tekSayiAdet + "tekSayiToplamlari =>" + tekToplam);
-            }
-            genelToplam=genelToplam+i;
-        }
-        console.log(`Genel Toplamları => ${genelToplam}`); // => interpolation yapısı
-    }
-    else{
-        let genelToplam=0, ciftSayiAdet=0,ciftToplam=0,tekSayiAdet=0,tekToplam=0;
+    else {
         for(let i=1;i<=bitisSayisi;i++){
-            if(i%2==0){
-                
-                ciftSayiAdet=ciftSayiAdet+1
-                ciftToplam=ciftToplam+i
-                console.log("cift Sayilar =>" + i + "Cift Sayi adeti =>" + ciftSayiAdet + "ciftSayiToplamlari =>" + ciftToplam);
+            if(i==7){
+                continue;
+            }
+            else if(i>50){
+               break;
             }
             else{
-                tekSayiAdet=tekSayiAdet+1
-                tekToplam=tekToplam+i
-                console.log("tek Sayilar =>" + i + "Tek Sayi adeti =>" + tekSayiAdet + "tekSayiToplamlari =>" + tekToplam);
+                if(i%2==0){
+                    ciftSayiAdet=ciftSayiAdet+1;
+                    ciftToplam=ciftToplam+i;
+                    console.log("ciftSayilar => " + i + "ciftSayiAdeti => " + ciftSayiAdet + "ciftSayilarinToplami =>" + ciftToplam);
+                }
+                else if(i%2!=0){
+                    tekSayiAdet=tekSayiAdet+1;
+                    tekToplam=tekToplam+i;
+                    console.log("tekSayilar => " + i + "tekSayi Adeti => " + tekSayiAdet + "tekSayilarinToplami =>" + tekToplam);
+                }
+                genelToplam=tekToplam+ciftToplam;
             }
-            genelToplam=genelToplam+i;
         }
-        console.log(`Genel Toplamları => ${genelToplam}`); // => interpolation yapısı
+        console.log(`Genel Toplam => ${genelToplam}`);
     }
 }
- //example();
+//example2();
