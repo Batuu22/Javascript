@@ -127,3 +127,19 @@ let example2=()=>{
     }
 } //end function
 //example2();
+////////////////////////////////////////////////////////////////////////////////////////////////
+let splitOrnek=()=>{
+    let text= "Merhaba Ben Batuhan Temel Javascript öğreniyorum";
+    let textSplit = text.split(" ",3);
+}
+//splitOrnek();   // => split metodu içerisine verilmiş parametre doğrultusunda değişken içeriğini bölümleyerek dizi oluşturur! ve diziyi geri döndürür.
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ÖDEV
+// kullanıcıdan aldığımız isim alınsın
+// kullanıcıdan aldığımız soyisim alınsın
+// ilk karakter göstersin sonraki kelimeleri masking (maskeleme yapsın)
+// eğer kullanıcı isim ve soyisimi ilk karakteri küçük girmişse büyük olsun mutlaka
+// Hamit Mızrak
+// H**** MIZ***
+// ipucu: charAt, substring, indexOf, döngü,
+

@@ -129,7 +129,7 @@
 //     let text = "Merhaba Ben Javascript Öğreniyorum";
 
 //     console.log(text.length);
-//     console.log(text.length-1); // => toplam kaç indeksden oluştugunu verir.
+//     console.log(text.length-1); // => son indeksi/indis 'i verir.
 //     console.log(text.slice(1));
 //     console.log(text.slice(0,4));
 //     console.log(text.substring(0));
