@@ -87,40 +87,40 @@
 //         console.log(`Genel Toplamları => ${genelToplam}`); // => interpolation yapısı
 //     }
 // }
- //example();
+//example();
 ///////////////////////
- // the other way
-let example2=()=>{
-    let genelToplam=0;
-    let ciftSayiAdet=0;
-    let ciftToplam=0;
-    let tekToplam=0;
-    let tekSayiAdet=0;
+// the other way
+let example2 = () => {
+    let genelToplam = 0;
+    let ciftSayiAdet = 0;
+    let ciftToplam = 0;
+    let tekToplam = 0;
+    let tekSayiAdet = 0;
 
-    let bitisSayisi=Number(prompt("bitis sayısını giriniz"));
-    if(bitisSayisi==44){
+    let bitisSayisi = Number(prompt("bitis sayısını giriniz"));
+    if (bitisSayisi == 44) {
         alert("Sistemden çıkılıyor");
     }
     else {
-        for(let i=1;i<=bitisSayisi;i++){
-            if(i==7){
+        for (let i = 1; i <= bitisSayisi; i++) {
+            if (i == 7) {
                 continue;
             }
-            else if(i>50){
-               break;
+            else if (i > 50) {
+                break;
             }
-            else{
-                if(i%2==0){
-                    ciftSayiAdet=ciftSayiAdet+1;
-                    ciftToplam=ciftToplam+i;
+            else {
+                if (i % 2 == 0) {
+                    ciftSayiAdet = ciftSayiAdet + 1;
+                    ciftToplam = ciftToplam + i;
                     console.log("ciftSayilar => " + i + "ciftSayiAdeti => " + ciftSayiAdet + "ciftSayilarinToplami =>" + ciftToplam);
                 }
-                else if(i%2!=0){
-                    tekSayiAdet=tekSayiAdet+1;
-                    tekToplam=tekToplam+i;
+                else if (i % 2 != 0) {
+                    tekSayiAdet = tekSayiAdet + 1;
+                    tekToplam = tekToplam + i;
                     console.log("tekSayilar => " + i + "tekSayi Adeti => " + tekSayiAdet + "tekSayilarinToplami =>" + tekToplam);
                 }
-                genelToplam=tekToplam+ciftToplam;
+                genelToplam = tekToplam + ciftToplam;
             }
         } //end for
         console.log(`Genel Toplam => ${genelToplam}`);
@@ -128,9 +128,9 @@ let example2=()=>{
 } //end function
 //example2();
 ////////////////////////////////////////////////////////////////////////////////////////////////
-let splitOrnek=()=>{
-    let text= "Merhaba Ben Batuhan Temel Javascript öğreniyorum";
-    let textSplit = text.split(" ",3);
+let splitOrnek = () => {
+    let text = "Merhaba Ben Batuhan Temel Javascript öğreniyorum";
+    let textSplit = text.split(" ", 3);
 }
 //splitOrnek();   // => split metodu içerisine verilmiş parametre doğrultusunda değişken içeriğini bölümleyerek dizi oluşturur! ve diziyi geri döndürür.
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -142,4 +142,21 @@ let splitOrnek=()=>{
 // Hamit Mızrak
 // H**** MIZ***
 // ipucu: charAt, substring, indexOf, döngü,
+
+let maskinWithMethods = () => {
+    let nameAndSurname=prompt("lütfen ad ve soyad giriniz");
+    let indeksNameAndSurname=nameAndSurname.indexOf(" ")
+    let name=nameAndSurname.substring(0,indeksNameAndSurname).toUpperCase();
+    for(let i=1;i<name.length;i++){
+        name=name.replace(name.charAt(i),"*")
+    }
+
+    let surname=nameAndSurname.substring(indeksNameAndSurname+1,nameAndSurname.length).toUpperCase();
+    for(let i=3;i<surname.length;i++){
+        surname=surname.replace(surname.charAt(i),"*");
+    }
+
+    console.log(name.concat(" ").concat(surname));
+}
+//maskinWithMethods();
 
