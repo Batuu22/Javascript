@@ -362,3 +362,32 @@ const debugData=()=>{
     console.log(toplam);
 }
 //debugData();
+
+////////////////////////////////////////////////////////////////////////////////////////
+//Monad => bir fonksiyonun çıktısı, başka bir fonksiyonun girdisi olma durumudur;
+
+let deneme1=()=>{
+    let text= "Batuhan Temel";
+    return text;
+}
+
+let deneme2=()=>{
+    let text2="Merhaba";
+    console.log(text2.concat(" ").concat(deneme1()));
+}
+//deneme2();
+
+////////////////////////////////////////////////////////////////////////////////////////
+let setTiming=()=>{
+    setTimeout(()=>{
+        console.log("Merhaba Batuhan");
+    },5000);
+}
+//setTiming();
+
+let setInterving=()=>{
+    setInterval(()=>{
+        console.log("Nasılsın");
+    },5000);
+}
+//setInterving();
