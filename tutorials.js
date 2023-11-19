@@ -338,25 +338,25 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 //try-catch(error-handling);
 
-let tryCatchTuto=()=>{
-    try{
+let tryCatchTuto = () => {
+    try {
         alertx("pop-up");
-    }catch(error){
+    } catch (error) {
         console.error(error);
     }
-    finally{
+    finally {
         console.log("her zaman çalışır");
         console.log("db.close");
     }
-    
+
 }
 // tryCatchTuto();
 ////////////////////////////////////////////////////////////////////////////////////////
 //debug Nedir ?
-const debugData=()=>{
+const debugData = () => {
     // 1 den 10'a kadar olan 1-10 dahil sayıların toplamı ?
     let toplam = 0;
-    for(let i=1;i<=10;i++){
+    for (let i = 1; i <= 10; i++) {
         toplam += i;
     }
     console.log(toplam);
@@ -411,15 +411,34 @@ const debugData=()=>{
 ////////////////////////////////////////////////////////////////////////////////////////
 //callbackfunction
 
-const birinci=(data)=>{
-    return Math.pow(2,data);
+const birinci = (data) => {
+    return Math.pow(2, data);
 }
 
-const ikinci=(callbackFunction)=>{
-    let user=Number(prompt("Lütfen sayi giriniz"));
-    let data=callbackFunction(user);
+const ikinci = (callbackFunction) => {
+    let user = Number(prompt("Lütfen sayi giriniz"));
+    let data = callbackFunction(user);
     console.log(data);
 }
 //ikinci(birinci);
 ////////////////////////////////////////////////////////////////////////////////////////
 //promise
+
+const promTutorials = () => {
+    // catch 1 tane olmak zorunda // promise yazarken new kullanıyoruz!
+    let data = new Promise((resolve, reject) => {
+        let status = 200;
+        if (status === 200)
+            resolve("çalıştı");
+        else
+            reject("çalışmadı");
+    })
+        .then(() => {
+            console.log("olumlu");
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+}
+//promTutorials();
+////////////////////////////////////////////////////////////////////////////////////////
