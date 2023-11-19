@@ -366,45 +366,60 @@ const debugData=()=>{
 ////////////////////////////////////////////////////////////////////////////////////////
 //Monad => bir fonksiyonun çıktısı, başka bir fonksiyonun girdisi olma durumudur;
 
-let deneme1=()=>{
-    let text= "Batuhan Temel";
-    return text;
-}
+// let deneme1=()=>{
+//     let text= "Batuhan Temel";
+//     return text;
+// }
 
-let deneme2=()=>{
-    let text2="Merhaba";
-    console.log(text2.concat(" ").concat(deneme1()));
-}
+// let deneme2=()=>{
+//     let text2="Merhaba";
+//     console.log(text2.concat(" ").concat(deneme1()));
+// }
 //deneme2();
 
 ////////////////////////////////////////////////////////////////////////////////////////
 //setTimeout() => belirli zaman sonra tek bir kere çalışır ve durur.
 //setInterval() => belirli zaman sonra çalışır ve sonsuza kadar kapanıp tekrar çalışır.
 
-let deneme3=()=>{
-    setTimeout(function(){
-        console.log("Hello");
-    },2000);
-}
-//deneme3();
+// let deneme3=()=>{
+//     setTimeout(function(){
+//         console.log("Hello");
+//     },2000);
+// }
+// //deneme3();
 
-let deneme4=()=>{
-    setInterval(function(){
-        console.log("How are you");
-    },2000);
-}
-//deneme4();
+// let deneme4=()=>{
+//     setInterval(function(){
+//         console.log("How are you");
+//     },2000);
+// }
+// //deneme4();
 
-let setTiming=()=>{
-    setTimeout(()=>{
-        console.log("Merhaba Batuhan");
-    },5000);
-}
-//setTiming();
+// let setTiming=()=>{
+//     setTimeout(()=>{
+//         console.log("Merhaba Batuhan");
+//     },5000);
+// }
+// //setTiming();
 
-let setInterving=()=>{
-    setInterval(()=>{
-        console.log("Nasılsın");
-    },5000);
-}
+// let setInterving=()=>{
+//     setInterval(()=>{
+//         console.log("Nasılsın");
+//     },5000);
+// }
 //setInterving();
+////////////////////////////////////////////////////////////////////////////////////////
+//callbackfunction
+
+const birinci=(data)=>{
+    return Math.pow(2,data);
+}
+
+const ikinci=(callbackFunction)=>{
+    let user=Number(prompt("Lütfen sayi giriniz"));
+    let data=callbackFunction(user);
+    console.log(data);
+}
+//ikinci(birinci);
+////////////////////////////////////////////////////////////////////////////////////////
+//promise
