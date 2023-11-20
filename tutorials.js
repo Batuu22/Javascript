@@ -442,3 +442,38 @@ const promTutorials = () => {
 }
 //promTutorials();
 ////////////////////////////////////////////////////////////////////////////////////////
+//dizi
+
+let arr=()=>{
+    const dizi=[3,4,5,6,7,34];
+    return dizi;
+}
+
+let arrResult=()=>{
+    let data=arr();
+    console.log(data);
+    //console.log(data[data.length-1]); // => son indis/index değerini verir.
+    //iterative for
+    // for(let i=0;i<data.length;i++){
+    //     document.writeln(i + " .indis => " + data[i] + "<br/>");
+    // }
+
+    //for in => indeksleri verir
+    // for(let temp in data){
+    //     document.writeln(temp + " => " + data[temp] + "<br/>");
+    // }
+    // document.writeln("+++++++++++++++++++++++++++++++++ <br/>");
+
+    //for of => indekslerdeki elemanları verir.
+    // for(let temp of data){
+    //     document.writeln(temp + "<br/>");
+    // }
+
+    //forEach
+    // forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
+    data.forEach(temp=>{
+        console.log(temp);
+    });
+}
+arrResult();
+
