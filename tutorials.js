@@ -471,9 +471,29 @@ let arrResult=()=>{
 
     //forEach
     // forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
-    data.forEach((value,index,array)=>{
-        document.writeln(value);
+    // data.forEach((value,index,array)=>{
+    //     document.writeln(value);
+    // });
+
+    //filter
+    // filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S[];
+    // let result=data.filter((value,index,array)=>{
+    //     return value%2==0;
+    // });
+    //document.writeln(result);
+
+    //map
+    // map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
+    let result2=data.map((value,index,array)=>{
+        return value+=10;
     });
+    document.writeln(result2);
+    
+
+
+
+
 }
 arrResult();
+
 
