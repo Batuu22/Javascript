@@ -523,6 +523,28 @@ let arrResult=()=>{
     // });
     // document.writeln(result6);
 
+    //dizilere devam
+    
+    document.writeln(data.length);
+    document.writeln(data.push(23)); // => dizinin sonuna eleman eklemek için push() kullanılır.
+    console.log(data);
+    document.writeln(data.pop());  // => pop() dizinin sonundaki elemanı siler
+    console.log(data);
+    document.writeln(data.unshift(54)); // => unshift() dizinin başına eleman eklemek için kullanılır.
+    console.log(data);
+    document.writeln(data.shift()); // => shift() dizinin başındaki elemanı silmek için kullanılır.
+    console.log(data);
+
+    //console.log(data.sort()); // =>  sort() metodu küçükten büyüğe sıralar;
+
+    console.log(data.reverse()); // tepe takla sıralar ...
+
+    // büyükten küçüğe sıralamak istersek de önce sort() yaparız sonra reverse () yaparız.
+    //örnek
+    console.log(data.sort().reverse()); // büyükten küçüğe sıralar.
+
+
+    
 
 }
 arrResult();
