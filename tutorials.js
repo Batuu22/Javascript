@@ -484,13 +484,44 @@ let arrResult=()=>{
 
     //map
     // map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
-    let result2=data.map((value,index,array)=>{
-        return value+=10;
-    });
-    document.writeln(result2);
-    
+    // let result2=data.map((value,index,array)=>{
+    //     return value+=10;
+    // });
+    // document.writeln(result2);
 
+    //fill
+    // fill(value: T, start?: number, end?: number): this;
+    // let yeni=data.fill(30);
+    // document.writeln(yeni);
+    //let yeni2=data.fill(30,2,4);
+    //document.writeln(yeni2)
 
+    //  find(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): T | undefined;
+    //  let result3=data.find((value,index,obj)=>{
+    //      return value==34
+    //  })
+    // document.writeln(result3);
+
+    //findIndex
+    // findIndex(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): number;
+    // let result4=data.findIndex((value,index,number)=>{
+    //     return value==5
+    // });
+    // document.writeln(result4);
+
+    //some
+    // some(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean;
+    // let result5=data.some((value,index,array)=>{
+    //     return value==7;
+    // })
+    // document.write(result5);
+
+    //every
+    //every(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean;
+    // let result6=data.every((value,index,array)=>{
+    //     return value==5;
+    // });
+    // document.writeln(result6);
 
 
 }
