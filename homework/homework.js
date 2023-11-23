@@ -159,4 +159,82 @@ let maskinWithMethods = () => {
     console.log(name.concat(" ").concat(surname));
 }
 //maskinWithMethods();
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ÖDEV
+/*
+ Örnek
+1.YOL normal diziyle yapalım
+rastgele 10 elemanlı bir dizi  oluşturalım.
+bu sayılardan tek olanları bulalım.
+bu tek sayıların sonuna 5 ekleyelim                 // iterative for loop 'ile yap...
+buradaki sayıları ekranda gösterelim. ?
+bu şarta uyan kaç tane sayı vardır ?
 
+ 2.YOL map,filter, forEach ile yapalım.
+ rastgele 10 elemanlı bir dizi  oluşturalım.  ==> (random)
+ bu sayılardan tek olanları bulalım.          ==> (filter)
+ bu tek sayıların sonuna 5 ekleyelim          ==> (map)
+ buradaki sayıları ekranda gösterelim. ?      ==> (forEach)
+ bu şarta uyan kaç tane sayı vardır ?         ==> (counter)
+ 2.YOL map,filter,counter
+
+*/
+
+//iterative for
+let randomDizi=()=>{
+    let sayiAdeti=1;
+    const arr=[45,4,7,12,76,34,67,42,12,47];
+    document.writeln("tüm sayılar => " + arr + "<br/>");
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2!=0){
+            document.writeln("tek sayılar => " + arr[i] + "<br/>");
+            document.writeln("tek sayılar 5 ile toplamı => " + Number(arr[i]+5) + "<br/>");
+            document.writeln("bu şarta uyan sayi adeti => " + sayiAdeti + "<br/>");
+            sayiAdeti++;
+        }
+    }
+}
+//randomDizi();
+////////////////////////////////////////////////////////////////////////////////////////////////
+//  rastgele 10 elemanlı bir dizi  oluşturalım.  
+//  bu sayılardan tek olanları bulalım.          
+//  bu tek sayıların sonuna 5 ekleyelim          
+//  buradaki sayıları ekranda gösterelim. ?      
+//  bu şarta uyan kaç tane sayı vardır ?        
+//  
+
+let randomDizi2=()=>{
+    let adet=0;
+    
+    const arr2=[];
+    for(let i=1;i<=10;i++){
+        arr2.push(parseInt(Math.random()*3+4));
+    }
+    // filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S[];
+    let tekSayilar=arr2.filter((value,index,array)=>{
+        return value%2!=0;
+    });
+    document.writeln(tekSayilar + "<br/>");
+    // map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
+    let tekSayilarWith5=tekSayilar.map((value,index,array)=>{
+        return value+5;
+    })
+    document.writeln(tekSayilarWith5 + "<br/>");
+
+    // let numbers=tekSayilarWith5.forEach((value,index,array)=>{
+    //     return array;
+    // })
+
+    for(let i=0;i<tekSayilarWith5.length;i++){
+        console.count("sayi adeti =>");
+    }
+
+    for(let amount of arr2){
+        if(amount%2!=0){
+            console.log(amount);
+            adet++;
+        }
+    }
+    console.log(adet);
+}
+randomDizi2();

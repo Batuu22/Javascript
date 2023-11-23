@@ -542,11 +542,8 @@ let arrResult=()=>{
     // büyükten küçüğe sıralamak istersek de önce sort() yaparız sonra reverse () yaparız.
     //örnek
     console.log(data.sort().reverse()); // büyükten küçüğe sıralar.
-
-
-    
-
 }
-arrResult();
+//arrResult();
+
 
 
