@@ -444,13 +444,13 @@ const promTutorials = () => {
 ////////////////////////////////////////////////////////////////////////////////////////
 //dizi
 
-let arr=()=>{
-    const dizi=[3,4,5,6,7,34];
+let arr = () => {
+    const dizi = [3, 4, 5, 6, 7, 34];
     return dizi;
 }
 
-let arrResult=()=>{
-    let data=arr();
+let arrResult = () => {
+    let data = arr();
     console.log(data);
     //console.log(data[data.length-1]); // => son indis/index değerini verir.
     //iterative for
@@ -524,7 +524,7 @@ let arrResult=()=>{
     // document.writeln(result6);
 
     //dizilere devam
-    
+
     document.writeln(data.length);
     document.writeln(data.push(23)); // => dizinin sonuna eleman eklemek için push() kullanılır.
     console.log(data);
@@ -544,6 +544,39 @@ let arrResult=()=>{
     console.log(data.sort().reverse()); // büyükten küçüğe sıralar.
 }
 //arrResult();
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//dizi objesi içerisinde 5 tane obje oluşturalım...
+let callbackFunctionComputer = () => {
+    const computerArray = [];
+    for (let i = 0; i < 5; i++) {
+        computerArray.push({
+            computerName: "callback computer " + (i + 1),
+            price: 100 * (i + 1)
+        });
+    }
+    console.log(computerArray);
+
+    //dizi içerisinde sadece computerName bileşenlerini gösterelim...
+    const arrayInComputerName = () => {
+        // map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
+        computerArray.map((temp) => {
+            console.log(`${temp.computerName}`);
+        });
+    }
+    //arrayInComputerName()
+    
+
+    //callback function Price
+    const arrayInComputerObject=(obj,callBackFnc)=>{
+        computerArray.push(obj);
+        callBackFnc();
+    }
+    arrayInComputerObject({computerName:"callback computer 6",price:600},arrayInComputerName);
+
+
+}
+callbackFunctionComputer();
 
 
 

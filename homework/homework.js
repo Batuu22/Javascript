@@ -237,4 +237,17 @@ let randomDizi2=()=>{
     }
     console.log(adet);
 }
-randomDizi2();
+//randomDizi2();
+
+//ornekCallbackFunction
+let deneme1=(data)=>{
+    return Math.sqrt(data);
+}
+let deneme2=(callbackFunction)=>{
+    let userData = Number(prompt("bir sayi giriniz"));
+    let sonuc = callbackFunction(userData);
+    console.log(sonuc); 
+}
+//deneme2(deneme1);
+
+
