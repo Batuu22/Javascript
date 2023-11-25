@@ -546,6 +546,7 @@ let arrResult = () => {
 //arrResult();
 
 //////////////////////////////////////////////////////////////////////////////////////////////
+//callback ornegi
 //dizi objesi içerisinde 5 tane obje oluşturalım...
 let callbackFunctionComputer = () => {
     const computerArray = [];
@@ -565,18 +566,49 @@ let callbackFunctionComputer = () => {
         });
     }
     //arrayInComputerName()
-    
 
-    //callback function Price
-    const arrayInComputerObject=(obj,callBackFnc)=>{
+    //callback function
+    const arrayInComputerObject = (obj, callBackFnc) => {
         computerArray.push(obj);
         callBackFnc();
     }
-    arrayInComputerObject({computerName:"callback computer 6",price:600},arrayInComputerName);
-
-
+    arrayInComputerObject({ computerName: "callback computer 6", price: 600 }, arrayInComputerName);
 }
-callbackFunctionComputer();
+//callbackFunctionComputer();
 
 
+//Promise ornegi
+//dizi objesi içerisinde 5 tane obje oluşturalım...
+let promiseFunctionComputer = () => {
+    const computerArray = [];
+    for (let i = 0; i < 5; i++) {
+        computerArray.push({
+            computerName: "callback computer " + (i + 1),
+            price: 100 * (i + 1)
+        });
+    }
+    console.log(computerArray);
 
+    //dizi içerisinde sadece computerName bileşenlerini gösterelim...
+    const arrayInComputerName = () => {
+        // map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
+        computerArray.map((temp) => {
+            console.log(`${temp.computerName}`);
+        });
+    }
+    //arrayInComputerName()
+
+    //promise
+    const arrayInComputerObject = (obj) => {
+        let promiseReturned = new Promise(() => {
+            computerArray.push(obj);
+        })
+        return promiseReturned;
+    }
+    arrayInComputerObject({ computerName: "callback computer 6", price: 600 })
+    .then(()=>{})
+    .catch((err)=>{
+        console.error(err);
+    });
+}
+promiseFunctionComputer();
