@@ -611,4 +611,95 @@ let promiseFunctionComputer = () => {
         console.error(err);
     });
 }
-promiseFunctionComputer();
+//promiseFunctionComputer();
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//object
+
+let objectTutorail=()=>{
+    const car={
+        brand:"ford",
+        engineSize:2.5,
+        "color":"blue",     // => property tırnaklar arasındada yazılabilir.
+        "software":["html5","css3","js"],
+        "fullName":function(){
+            return this.brand;
+        },
+    }
+
+    //1.yol variable
+    console.log(car.engineSize);
+    console.log(car.color);
+    console.log(car.brand);
+    console.log(car.software);
+
+    //2.yol variable nested
+    console.log(car["engineSize"]);
+    console.log(car["color"]);
+    console.log(car["brand"]);
+    console.log(car["software"]);
+
+    //Array
+    console.log("1.indeks => " + car.software[1]);
+
+    // Object Methods
+    //console.log(Object.keys(car));  // => keys verir = property(özellik)
+    //console.log(Object.values(car)); // => values verir = özellik değeri
+    //console.log(Object.freeze(car)); // => obje içerisinde yapılacak herhangi bir değişikliği engeller. objeyi dondurur.
+    //car.brand="mercedes";
+    //console.log(car["brand"]); // => brandi değiştirmedi Object.freeze yaptığımız için brandi hala ford olarak verir.
+
+    //console.log(Object.entries(car)); // => Object.entries() obje içerisindeki hem property(keys)'leri hem de özellik değerlerini(values)'ları nested array şekilde yazar.
+
+    const bike={
+        "rimInch":3.2,
+    }
+
+    const tv={
+        refreshRate:"165hz",
+    }
+                                 //1.par=hedef, 2-3-n.par=aktarılacak objeler
+    let mergedObjects=Object.assign(car,bike,tv);  // => Object.assign() iki veya daha fazla objenin içeriklerini tek bir objeye aktarır.
+    //console.log(mergedObjects);
+
+    //console.log(Object.seal(car)); // => Object.seal() yapılmış objelerin içerisine yeni propertyler ekleyemezsin ve var olan propertyleri silemezsin!.
+    
+    let plaka = {plate:7};
+    let sonuc=Object.assign(car,plaka);     // => plaka objesinin içeriğini car objesine ekleyemedi,
+                                            //    cünkü car objesi önceden seal(mühürlemek) yapılmış! 
+    console.log(sonuc);
+
+
+    //object to string => objeyi stringe çevirme
+    let toString=JSON.stringify(car);
+    console.warn(toString);
+    console.log(typeof toString);
+
+    //string to object => stringi objeye çevirme
+    let toObject=JSON.parse(toString);
+    console.log(toObject);
+
+    //objeye dışardan yeni property(özellik) ekleme.
+    car.headLights="yellow";
+    console.log(car);
+
+    // özellik değeri function olan propertye ulaşmak...
+    console.log(car.fullName());
+    
+    car.inProcess=true;
+    console.log(car);
+
+
+
+
+    
+
+
+
+    
+
+    
+    
+
+}
+objectTutorail();
