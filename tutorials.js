@@ -792,14 +792,24 @@ let noParamCallApplyBindTuto=()=>{
     functionOtherObject.apply(person);
     let sonuc=functionOtherObject.bind(person);
     sonuc();
-
-    
-    
-    
-
-
 }
-noParamCallApplyBindTuto();
+//noParamCallApplyBindTuto();
 
+let paramCallApplyBindTuto=()=>{
+    let functionOtherObject2=function(definition){
+        //console.log("merhaba " + this.brand + " " + this.model + " " + definition);
+        console.log(`merhaba ${this.brand} ${this.model} ${definition}`); // =>interpolation
+    }
+
+    const computer={
+        brand:"Asus",
+        "model":"Tuf Gaming",
+    }
+    functionOtherObject2.call(computer,"Javascript Öğreniyorum");
+    functionOtherObject2.apply(computer,["Javascript Öğreniyorum"]); //apply da parametre dizi yapısı[] içerisinde gönderilir.
+    let sonuc2=functionOtherObject2.bind(computer,"Javascript Öğreniyorum");
+    sonuc2();
+}
+paramCallApplyBindTuto();
 
 
