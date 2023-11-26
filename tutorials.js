@@ -765,7 +765,6 @@ let objectTutorail2 = () => {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //object constructor
-
 let objectConstructor = () => {
     let dataConstructor = function (name, surname) {
         this.name = name;
@@ -775,6 +774,32 @@ let objectConstructor = () => {
     let data = new dataConstructor("batuhan", "temel");
     console.log(data.name);
 }
-objectConstructor();
+//objectConstructor();
+
+//call,apply,bind => bir fonksiyon dışardan bir objeye nasıl bağlanır.
+let noParamCallApplyBindTuto=()=>{
+
+    let functionOtherObject=function(){
+        console.log(`Merhaba ${this.name} ${this.surname} nasılsın`); // => interpolation yapısı
+    }
+
+    const person={
+        "name":"Batuhan",
+        surname:"Temel",
+    }
+
+    functionOtherObject.call(person);
+    functionOtherObject.apply(person);
+    let sonuc=functionOtherObject.bind(person);
+    sonuc();
+
+    
+    
+    
+
+
+}
+noParamCallApplyBindTuto();
+
 
 
