@@ -606,23 +606,23 @@ let promiseFunctionComputer = () => {
         return promiseReturned;
     }
     arrayInComputerObject({ computerName: "callback computer 6", price: 600 })
-    .then(()=>{})
-    .catch((err)=>{
-        console.error(err);
-    });
+        .then(() => { })
+        .catch((err) => {
+            console.error(err);
+        });
 }
 //promiseFunctionComputer();
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 //object
 
-let objectTutorail=()=>{
-    const car={
-        brand:"ford",
-        engineSize:2.5,
-        "color":"blue",     // => property tırnaklar arasındada yazılabilir.
-        "software":["html5","css3","js"],
-        "fullName":function(){
+let objectTutorail = () => {
+    const car = {
+        brand: "ford",
+        engineSize: 2.5,
+        "color": "blue",     // => property tırnaklar arasındada yazılabilir.
+        "software": ["html5", "css3", "js"],
+        "fullName": function () {
             return this.brand;
         },
     }
@@ -651,57 +651,57 @@ let objectTutorail=()=>{
 
     //console.log(Object.entries(car)); // => Object.entries() obje içerisindeki hem property(keys)'leri hem de özellik değerlerini(values)'ları nested array şekilde yazar.
 
-    const bike={
-        "rimInch":3.2,
+    const bike = {
+        "rimInch": 3.2,
     }
 
-    const tv={
-        refreshRate:"165hz",
+    const tv = {
+        refreshRate: "165hz",
     }
-                                 //1.par=hedef, 2-3-n.par=aktarılacak objeler
-    let mergedObjects=Object.assign(car,bike,tv);  // => Object.assign() iki veya daha fazla objenin içeriklerini tek bir objeye aktarır.
+    //1.par=hedef, 2-3-n.par=aktarılacak objeler
+    let mergedObjects = Object.assign(car, bike, tv);  // => Object.assign() iki veya daha fazla objenin içeriklerini tek bir objeye aktarır.
     //console.log(mergedObjects);
 
     //console.log(Object.seal(car)); // => Object.seal() yapılmış objelerin içerisine yeni propertyler ekleyemezsin ve var olan propertyleri silemezsin!.
-    
-    let plaka = {plate:7};
-    let sonuc=Object.assign(car,plaka);     // => plaka objesinin içeriğini car objesine ekleyemedi,
-                                            //    cünkü car objesi önceden seal(mühürlemek) yapılmış! 
+
+    let plaka = { plate: 7 };
+    let sonuc = Object.assign(car, plaka);     // => plaka objesinin içeriğini car objesine ekleyemedi,
+    //    cünkü car objesi önceden seal(mühürlemek) yapılmış! 
     console.log(sonuc);
 
 
     //object to string => objeyi stringe çevirme
-    let toString=JSON.stringify(car);
+    let toString = JSON.stringify(car);
     console.warn(toString);
     console.log(typeof toString);
 
     //string to object => stringi objeye çevirme
-    let toObject=JSON.parse(toString);
+    let toObject = JSON.parse(toString);
     console.log(toObject);
 
     //objeye dışardan yeni property(özellik) ekleme.
-    car.headLights="yellow";
+    car.headLights = "yellow";
     console.log(car);
 
-    car.inProcess=true;
+    car.inProcess = true;
     console.log(car);
 
     // özellik değeri function olan propertye ulaşmak...
     console.log(car.fullName());
-    
+
     //obje içerisinde bir propertysi silmek için delete keywordu kullanılır.
-    let newCarValue=delete car.color;
+    let newCarValue = delete car.color;
     console.log(newCarValue);
     console.log(car);
 }
 //objectTutorail();
 
-let objectTutorail2=()=>{
-    const cellPhone={
-        "processor":"intel",
-        screenSize:5.7,
-        "color":"black",
-        processorModel:function(){
+let objectTutorail2 = () => {
+    const cellPhone = {
+        "processor": "intel",
+        screenSize: 5.7,
+        "color": "black",
+        processorModel: function () {
             return "işlemci markası : " + this.processor;
         }
     }
@@ -757,8 +757,24 @@ let objectTutorail2=()=>{
     // console.log(tv);
     // Object.assign(cellPhone,tv);    // => iki veya daha fazla objenin içeriklerini tek bir objeye aktarır.
     // console.log(cellPhone);
-    
+
     // özellik değeri function olan dataya ulaşmak için () kullan!
     console.log(cellPhone.processorModel());
 }
 //objectTutorail2();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//object constructor
+
+let objectConstructor = () => {
+    let dataConstructor = function (name, surname) {
+        this.name = name;
+        this.surname = surname;
+        console.log(this);
+    }
+    let data = new dataConstructor("batuhan", "temel");
+    console.log(data.name);
+}
+objectConstructor();
+
+
