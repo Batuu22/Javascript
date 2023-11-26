@@ -683,23 +683,20 @@ let objectTutorail=()=>{
     car.headLights="yellow";
     console.log(car);
 
-    // özellik değeri function olan propertye ulaşmak...
-    console.log(car.fullName());
-    
     car.inProcess=true;
     console.log(car);
 
-
-
-
+    // özellik değeri function olan propertye ulaşmak...
+    console.log(car.fullName());
     
-
-
-
-    
-
-    
-    
-
+    //obje içerisinde bir propertysi silmek için delete keywordu kullanılır.
+    let newCarValue=delete car.color;
+    console.log(newCarValue);
+    console.log(car);
 }
-objectTutorail();
+//objectTutorail();
+
+let objectTutorail2=()=>{
+    
+}
+objectTutorail2();
