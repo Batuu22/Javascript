@@ -697,6 +697,68 @@ let objectTutorail=()=>{
 //objectTutorail();
 
 let objectTutorail2=()=>{
+    const cellPhone={
+        "processor":"intel",
+        screenSize:5.7,
+        "color":"black",
+        processorModel:function(){
+            return "işlemci markası : " + this.processor;
+        }
+    }
+    console.log(cellPhone);
+
+    // //variable
+    // console.log(cellPhone.screenSize);
+
+    // //variable nested
+    // console.log(cellPhone["color"]);
+
+    // //property(özellik) ekleme
+    // cellPhone.capOfBattery="4000mh";
+    // console.log(cellPhone);
+
+    // //property(özellik) silme // delete keywordu kullan
+    // delete cellPhone.capOfBattery;
+    // console.log(cellPhone);
+
+    // //object to string
+    // let stringifiedObj=JSON.stringify(cellPhone);
+    // console.log(typeof stringifiedObj);
+    // console.log(stringifiedObj);
+
+    // //string to object
+    // let objectedData=JSON.parse(stringifiedObj);
+    // console.log(typeof objectedData);
+    // console.log(objectedData);
+
+    /////////////////////////////////////////////////////////////////////
+    //object methods
+    console.log(Object.keys(cellPhone));
+    console.log(Object.values(cellPhone));
+    console.log(Object.entries(cellPhone));
+
+    // Object.freeze(cellPhone);
+    // cellPhone["processor"]="windows";
+    // console.log(cellPhone);
+    // cellPhone.dualBattery=true; // => eklemedi çünkü cellphone freeze yapılmış
+    // console.log(cellPhone);
+
+    // Object.seal(cellPhone);
+    // console.log(cellPhone);
+    // delete cellPhone["screenSize"]; // obje içerisindeki screenSize property'yi silmedi çünkü obje seal yapılmış!.
+    // console.log(cellPhone);
+
+    // console.log(cellPhone);
+
+    // const tv={
+    //     "windowType":"curved",
+    //     numOfCameras:3,
+    // }
+    // console.log(tv);
+    // Object.assign(cellPhone,tv);    // => iki veya daha fazla objenin içeriklerini tek bir objeye aktarır.
+    // console.log(cellPhone);
     
+    // özellik değeri function olan dataya ulaşmak için () kullan!
+    console.log(cellPhone.processorModel());
 }
-objectTutorail2();
+//objectTutorail2();
