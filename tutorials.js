@@ -578,7 +578,7 @@ let callbackFunctionComputer = () => {
     }
     arrayInComputerObject({ computerName: "callback computer 6", price: 600 }, arrayInComputerName);
 }
-callbackFunctionComputer();
+//callbackFunctionComputer();
 
 
 //Promise ornegi
