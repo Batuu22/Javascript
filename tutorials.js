@@ -549,23 +549,27 @@ let arrResult = () => {
 //callback ornegi
 //dizi objesi içerisinde 5 tane obje oluşturalım...
 let callbackFunctionComputer = () => {
-    const computerArray = [];
-    for (let i = 0; i < 5; i++) {
-        computerArray.push({
-            computerName: "callback computer " + (i + 1),
-            price: 100 * (i + 1)
-        });
-    }
-    console.log(computerArray);
+    const sameDataArray = () => {
+        computerArray = [];
+        for (let i = 0; i < 5; i++) {
+            computerArray.push({
+                computerName: "callback computer " + (i + 1),
+                price: 100 * (i + 1)
+            });
+        }
 
-    //dizi içerisinde sadece computerName bileşenlerini gösterelim...
-    const arrayInComputerName = () => {
-        // map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
-        computerArray.map((temp) => {
-            console.log(`${temp.computerName}`);
-        });
+        console.log(computerArray);
+
+        //dizi içerisinde sadece computerName bileşenlerini gösterelim...
+        arrayInComputerName = () => {
+            // map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
+            computerArray.map((temp) => {
+                console.log(`${temp.computerName}`);
+            });
+        }
+        //arrayInComputerName()
     }
-    //arrayInComputerName()
+    sameDataArray();
 
     //callback function
     const arrayInComputerObject = (obj, callBackFnc) => {
@@ -574,29 +578,14 @@ let callbackFunctionComputer = () => {
     }
     arrayInComputerObject({ computerName: "callback computer 6", price: 600 }, arrayInComputerName);
 }
-//callbackFunctionComputer();
+callbackFunctionComputer();
 
 
 //Promise ornegi
 //dizi objesi içerisinde 5 tane obje oluşturalım...
 let promiseFunctionComputer = () => {
-    const computerArray = [];
-    for (let i = 0; i < 5; i++) {
-        computerArray.push({
-            computerName: "callback computer " + (i + 1),
-            price: 100 * (i + 1)
-        });
-    }
-    console.log(computerArray);
 
-    //dizi içerisinde sadece computerName bileşenlerini gösterelim...
-    const arrayInComputerName = () => {
-        // map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
-        computerArray.map((temp) => {
-            console.log(`${temp.computerName}`);
-        });
-    }
-    //arrayInComputerName()
+    callbackFunctionComputer();
 
     //promise
     const arrayInComputerObject = (obj) => {
@@ -777,37 +766,37 @@ let objectConstructor = () => {
 //objectConstructor();
 
 //call,apply,bind => bir fonksiyon dışardan bir objeye nasıl bağlanır.
-let noParamCallApplyBindTuto=()=>{
+let noParamCallApplyBindTuto = () => {
 
-    let functionOtherObject=function(){
+    let functionOtherObject = function () {
         console.log(`Merhaba ${this.name} ${this.surname} nasılsın`); // => interpolation yapısı
     }
 
-    const person={
-        "name":"Batuhan",
-        surname:"Temel",
+    const person = {
+        "name": "Batuhan",
+        surname: "Temel",
     }
 
     functionOtherObject.call(person);
     functionOtherObject.apply(person);
-    let sonuc=functionOtherObject.bind(person);
+    let sonuc = functionOtherObject.bind(person);
     sonuc();
 }
 //noParamCallApplyBindTuto();
 
-let paramCallApplyBindTuto=()=>{
-    let functionOtherObject2=function(definition){
+let paramCallApplyBindTuto = () => {
+    let functionOtherObject2 = function (definition) {
         //console.log("merhaba " + this.brand + " " + this.model + " " + definition);
         console.log(`merhaba ${this.brand} ${this.model} ${definition}`); // =>interpolation
     }
 
-    const computer={
-        brand:"Asus",
-        "model":"Tuf Gaming",
+    const computer = {
+        brand: "Asus",
+        "model": "Tuf Gaming",
     }
-    functionOtherObject2.call(computer,"Javascript Öğreniyorum");
-    functionOtherObject2.apply(computer,["Javascript Öğreniyorum"]); //apply da parametre dizi yapısı[] içerisinde gönderilir.
-    let sonuc2=functionOtherObject2.bind(computer,"Javascript Öğreniyorum");
+    functionOtherObject2.call(computer, "Javascript Öğreniyorum");
+    functionOtherObject2.apply(computer, ["Javascript Öğreniyorum"]); //apply da parametre dizi yapısı[] içerisinde gönderilir.
+    let sonuc2 = functionOtherObject2.bind(computer, "Javascript Öğreniyorum");
     sonuc2();
 }
 //paramCallApplyBindTuto();
