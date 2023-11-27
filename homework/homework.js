@@ -249,5 +249,53 @@ let deneme2=(callbackFunction)=>{
     console.log(sonuc); 
 }
 //deneme2(deneme1);
+////////////////////////////////////////////////////////////////////////////////////////////////
+let constructorTutorial=()=>{
+    let teaPlant=function (color,height,leafNum){
+        this.color=color;
+        this.height=height;
+        this.leafNum=leafNum;
+        console.log(this);
+    }
+    let data=new teaPlant("green","50cm",6);
+    console.log(data);
+    console.log(data.color);
+    console.log(data["leafNum"]);
+    console.log(typeof data);
+}
+//constructorTutorial();
+////////////////////////////////////////////////////////////////////////////////////////////////
+//call,apply,bind // => bir fonksiyon dışardan bir objeye nasıl bağlanır.
+let noParamCallApplyBind=()=>{
+    let functionOtherObject=function deneme1(){
+        //console.log("Benim satın aldığım bisikletin markası " + this.brand + " fiyatı ise " + this.price + "TL");
+        console.log(`Benim satın aldığım bisikletin markası ${this.brand} fiyatı ise ${this.price}TL`); // => interpolation
+    }
+    const bicycle={
+        "brand":"Bisan",
+        price:3000,
+    }
+    functionOtherObject.call(bicycle);
+    functionOtherObject.apply(bicycle);
+    let sonuc=functionOtherObject.bind(bicycle);
+    sonuc();
 
+}
+//noParamCallApplyBind();
 
+let paramCallApplyBind=()=>{
+    let functionOtherObject2=function(name){
+        console.log("bu telefon " + name + "a'ait, markası " + this.brand + " fiyatı ise " + this.price);
+    }
+    const cellPhone={
+        "brand":"Apple",
+        price:10000,
+    }
+
+    functionOtherObject2.call(cellPhone,"Batuhan");
+    functionOtherObject2.apply(cellPhone,["Batuhan"]); // => parametreli fonksiyonlar bir objeye bağlanırken, apply() kısmında parametreleri [] dizi içerisinde yollamak zorundasın. aksi takdirde binding yapmaz.
+    let data2=functionOtherObject2.bind(cellPhone,"Batuhan");
+    data2();
+
+}
+//paramCallApplyBind();

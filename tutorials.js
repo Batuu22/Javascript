@@ -810,6 +810,6 @@ let paramCallApplyBindTuto=()=>{
     let sonuc2=functionOtherObject2.bind(computer,"Javascript Öğreniyorum");
     sonuc2();
 }
-paramCallApplyBindTuto();
+//paramCallApplyBindTuto();
 
 
