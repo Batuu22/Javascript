@@ -800,5 +800,25 @@ let paramCallApplyBindTuto = () => {
     sonuc2();
 }
 //paramCallApplyBindTuto();
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//event
+let clicking=()=>{
+    window.alert("Clicked");
+}
+let dblClicking=()=>{
+    document.writeln("dblClicked");
+}
+let mousing=()=>{
+    alert("Buton üzerine gelindi.");
+}
+let data=document.getElementById("buton_id")
+data.addEventListener("dblclick",function(){        // => listener
+    alert("gerçekleşti");
+});
+
+let keyDownEvent=()=>{
+    alert("tuş çalıştı");
+}
+
 
 
