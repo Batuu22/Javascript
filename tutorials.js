@@ -811,14 +811,28 @@ let dblClicking=()=>{
 let mousing=()=>{
     alert("Buton üzerine gelindi.");
 }
-let data=document.getElementById("buton_id")
-data.addEventListener("dblclick",function(){        // => listener
-    alert("gerçekleşti");
-});
-
 let keyDownEvent=()=>{
     alert("tuş çalıştı");
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// dom
+newDataDate=()=>{
+    let date=document.getElementById("date_id");
+    date.innerHTML="<b><i>" + new Date().getFullYear() + "</i></b>";
+    //date.innerHTML=`<b><i> ${new Date().getFullYear()} </i></b>`; => interpolation yapısı
+
+    //date.innerText="<b><i>" + new Date().getDate() + "</i></b>";
+    //date.innerText=`<b><i> ${new Date().getFullYear()} </i></b>`; => interpolation yapısı
+
+    //CSS DOM
+    date.style.color="#f00";    //  => classList e ' de bak
+}
+
+
+
+
+
+
 
 
 
