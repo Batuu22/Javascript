@@ -18,47 +18,91 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 <body>
-    <div class="container">
-        <h3 class="text center text-primary display-4" id="h3_id">Javascript</h3>
-        <button class="btn btn-primary" onclick="clicking()">Click me!</button>
-        <!-- <button class="btn btn-primary" ondblclick="dblClicking()">Double Click</button>
+  <div class="container">
+    <h3 class="text center text-primary display-4" id="h3_id">Javascript</h3>
+    <button class="btn btn-primary" onclick="clicking()">Click me!</button>
+    <!-- <button class="btn btn-primary" ondblclick="dblClicking()">Double Click</button>
         <button class="btn btn-primary" onmouseover="mousing()">Buton üzerine gel</button>
         <button class="btn btn-primary" id="buton_id">Js üzerinden</button>
         <button class="btn btn-info" onkeydown="keyDownEvent()">keyEvent</button>
         <button class="btn btn-danger" onkeyup="keyDownEvent()">keyEvent</button> -->
 
-        <!-- paragraph -->
-        <p id="parag_id" class="parag_class" style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus nam quibusdam voluptatum, cum, accusamus molestiae, veritatis tempora enim at perferendis iste soluta neque quo eos accusantium ex vero earum vel.
-        Odio quaerat temporibus necessitatibus, cum consectetur animi ea soluta? Architecto necessitatibus illo fuga officia corrupti fugit unde at blanditiis quisquam, maxime temporibus rerum reiciendis natus! Laboriosam ullam id quo accusamus?
-        Ea, recusandae est non nobis vel dolores id, nemo quis voluptates, debitis dolorum vitae! Iure laborum autem ratione mollitia excepturi illum dicta, dolor aspernatur fuga. Ducimus corporis sit dolor ipsum.
-        Tempora nesciunt, commodi accusamus qui delectus doloribus, in neque nulla labore, expedita dolorum ipsa odit veritatis. Ducimus voluptatibus libero nisi atque magnam praesentium, saepe labore quae, harum itaque mollitia a?</p>
-        <span id="special_id"></span>
-        <button id="data_id" class="btn btn-primary" onclick="newDataDate()">Data</button>
-        <span id="date_id">...</span>
+    <!-- paragraph -->
+    <p id="parag_id" class="parag_class" style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur
+      adipisicing elit. Doloribus nam quibusdam voluptatum, cum, accusamus molestiae, veritatis tempora enim at
+      perferendis iste soluta neque quo eos accusantium ex vero earum vel.
+      Odio quaerat temporibus necessitatibus, cum consectetur animi ea soluta? Architecto necessitatibus illo fuga
+      officia corrupti fugit unde at blanditiis quisquam, maxime temporibus rerum reiciendis natus! Laboriosam ullam id
+      quo accusamus?
+      Ea, recusandae est non nobis vel dolores id, nemo quis voluptates, debitis dolorum vitae! Iure laborum autem
+      ratione mollitia excepturi illum dicta, dolor aspernatur fuga. Ducimus corporis sit dolor ipsum.
+      Tempora nesciunt, commodi accusamus qui delectus doloribus, in neque nulla labore, expedita dolorum ipsa odit
+      veritatis. Ducimus voluptatibus libero nisi atque magnam praesentium, saepe labore quae, harum itaque mollitia a?
+    </p>
+    <span id="special_id"></span>
+    <button id="data_id" class="btn btn-primary" onclick="newDataDate()">Data</button>
+    <span id="date_id">...</span>
 
-        <p id="parag_id2" class="parag_class" style="text-align: justify;" onclick="eventData()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ullam molestias fugit id sequi quos mollitia nam aut sapiente? Obcaecati natus et aliquam eos laborum recusandae illum facilis laudantium ut!
-        Mollitia, velit. Sed veniam in incidunt aliquid nam mollitia provident similique laboriosam asperiores. Dicta praesentium unde consequuntur illum, dolor molestiae ducimus at esse adipisci quasi tempora sequi ut cum sint.
-        Recusandae minima odio quasi perspiciatis velit dolorem, nisi eaque repudiandae corrupti est nulla rerum aliquam, quo corporis nam expedita in, dicta distinctio. Nam corporis dignissimos ipsam cumque modi voluptatibus iure.
-        Corrupti, accusamus deserunt. Mollitia in ex amet optio maxime libero. Labore saepe harum mollitia quo voluptatibus, incidunt ipsam neque fugit esse et laboriosam repellendus dolorem sint, officiis numquam possimus quod.</p>
-        <span id="special2_id"></span>
+    <p id="parag_id2" class="parag_class" style="text-align: justify;" onclick="eventData()">Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Aspernatur ullam molestias fugit id sequi quos mollitia nam aut sapiente? Obcaecati
+      natus et aliquam eos laborum recusandae illum facilis laudantium ut!
+      Mollitia, velit. Sed veniam in incidunt aliquid nam mollitia provident similique laboriosam asperiores. Dicta
+      praesentium unde consequuntur illum, dolor molestiae ducimus at esse adipisci quasi tempora sequi ut cum sint.
+      Recusandae minima odio quasi perspiciatis velit dolorem, nisi eaque repudiandae corrupti est nulla rerum aliquam,
+      quo corporis nam expedita in, dicta distinctio. Nam corporis dignissimos ipsam cumque modi voluptatibus iure.
+      Corrupti, accusamus deserunt. Mollitia in ex amet optio maxime libero. Labore saepe harum mollitia quo
+      voluptatibus, incidunt ipsam neque fugit esse et laboriosam repellendus dolorem sint, officiis numquam possimus
+      quod.</p>
+    <span id="special2_id"></span>
 
-        <p id="parag_id3" class="parag_class" onclick="domData2()">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, error, at doloribus aspernatur dignissimos iure magni reprehenderit expedita quo quaerat ullam molestiae atque asperiores dolore commodi odio eveniet, voluptate dolor.
-        Tenetur distinctio praesentium itaque quis iste autem incidunt animi fugit minima eaque magnam nisi quo amet, molestiae rerum, eveniet enim, vel officia similique dolores nulla ducimus ea illo. Inventore, at!
-        Fugiat libero magnam ullam modi laborum quisquam, quae, error est deleniti laudantium repellendus ipsa voluptate natus dolore, dolorum corporis. Eum beatae explicabo praesentium minus! Voluptatem aliquam sit veniam nemo est.
-        Temporibus, soluta, nemo blanditiis dolore quasi perspiciatis deleniti voluptas quis molestiae repudiandae unde. Neque deleniti, architecto maxime aliquid omnis dolor assumenda modi obcaecati nesciunt iure quibusdam, cupiditate distinctio quis minus.</p>
-    </div>
-    
+    <p id="parag_id3" class="parag_class" onclick="domData2()">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      A, error, at doloribus aspernatur dignissimos iure magni reprehenderit expedita quo quaerat ullam molestiae atque
+      asperiores dolore commodi odio eveniet, voluptate dolor.
+      Tenetur distinctio praesentium itaque quis iste autem incidunt animi fugit minima eaque magnam nisi quo amet,
+      molestiae rerum, eveniet enim, vel officia similique dolores nulla ducimus ea illo. Inventore, at!
+      Fugiat libero magnam ullam modi laborum quisquam, quae, error est deleniti laudantium repellendus ipsa voluptate
+      natus dolore, dolorum corporis. Eum beatae explicabo praesentium minus! Voluptatem aliquam sit veniam nemo est.
+      Temporibus, soluta, nemo blanditiis dolore quasi perspiciatis deleniti voluptas quis molestiae repudiandae unde.
+      Neque deleniti, architecto maxime aliquid omnis dolor assumenda modi obcaecati nesciunt iure quibusdam, cupiditate
+      distinctio quis minus.</p>
+
+    <!-- ask user -->
+    <!-- <br/>
+        <button class="btn btn-primary mt-2" onclick="askingQuestion()">Ask Question</button> -->
+    <hr>
+    <hr>
+    <br>
+    <p id="parag_list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatem ullam ad aperiam
+      reprehenderit! Itaque id earum dolorem repellendus nemo. Optio laborum odio, sit perspiciatis fugit harum
+      cupiditate eum hic.
+      Laudantium, impedit vel! Minima reiciendis fuga odio. Sint minus, tempora deserunt labore distinctio mollitia
+      consequuntur. Excepturi nemo itaque dolores! Magnam quas accusantium temporibus exercitationem a ex quod sapiente
+      quasi et.
+      Itaque quia, amet esse laboriosam neque saepe iure dolorum nobis nesciunt facilis dicta similique tempora libero
+      soluta maxime perferendis illo nulla nostrum, aut vero. Tenetur rem est laudantium neque consequatur!
+      Numquam, labore ipsam! Illum esse molestiae quam, aut ea tempore architecto nobis quos necessitatibus sit ducimus,
+      repudiandae totam repellat voluptatum ex ad quibusdam, quasi itaque commodi optio! Perspiciatis, laboriosam
+      dolores!</p>
+
+    Log Information : <span id="log_admin"></span>
+  </div>
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
+    </script>
 
   <!-- External JS -->
   <script src="./tutorials.js"></script>

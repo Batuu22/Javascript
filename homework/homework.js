@@ -299,3 +299,15 @@ let paramCallApplyBind=()=>{
 
 }
 //paramCallApplyBind();
+////////////////////////////////////////////////////////////////////////////////////////////////
+/*Butona tıkladığımızda kullanıcıya soru sorsun
+farklı bir sayfaya gitmek istermisiniz ?
+evetse farkli bir sayfaya redirect(yönlensin)
+değilse alert versin */
+
+let askingQuestion=()=>{
+    let userInformation=window.confirm("Farklı bir sayfaya gitmek istermisiniz ?")
+    ? window.location="https://www.google.com/" //redirect
+    : window.alert("Bu sayfada kalındı");
+}
+////////////////////////////////////////////////////////////////////////////////////////////////

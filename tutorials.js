@@ -816,45 +816,61 @@ let keyDownEvent=()=>{
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // dom
-newDataDate=()=>{
-    let date=document.getElementById("date_id");
-    date.innerHTML="<b><i>" + new Date().getFullYear() + "</i></b>";
-    //date.innerHTML=`<b><i> ${new Date().getFullYear()} </i></b>`; => interpolation yapısı
+// newDataDate=()=>{
+//     let date=document.getElementById("date_id");
+//     date.innerHTML="<b><i>" + new Date().getFullYear() + "</i></b>";
+//     //date.innerHTML=`<b><i> ${new Date().getFullYear()} </i></b>`; => interpolation yapısı
 
-    //date.innerText="<b><i>" + new Date().getDate() + "</i></b>";
-    //date.innerText=`<b><i> ${new Date().getFullYear()} </i></b>`; => interpolation yapısı
+//     //date.innerText="<b><i>" + new Date().getDate() + "</i></b>";
+//     //date.innerText=`<b><i> ${new Date().getFullYear()} </i></b>`; => interpolation yapısı
 
-    //CSS DOM
-    date.style.color="#f00";    //  => classList e ' de bak
-}
-let listenerData=()=>{
-    let text=document.getElementById("parag_id");
-    text.addEventListener("mouseover",function(){
-        let special=document.getElementById("special_id");
-        special.style.color="#00f";
-        special.innerHTML="Üzerine gelindi";
+//     //CSS DOM
+//     date.style.color="#f00";    //  => classList e ' de bak
+// }
+//  let listenerData=()=>{
+//      let text=document.getElementById("parag_id");
+//      text.addEventListener("mouseover",function(e){
+//         //browser sen bir şey yapma yaparsam ben yaparım,
+//         e.preventDefault();
+//          let special=document.getElementById("special_id");
+//          special.style.color="#00f";
+//          special.innerHTML="Üzerine gelindi";
+//      })
+//  }
+//  listenerData();
+
+// let eventData=()=>{
+//     //ID
+//     //let special2=document.getElementById("special2_id");
+
+//     //querySelector
+//     let special2=document.querySelector(".parag_class");
+//     special2.innerHTML="Tıklandı";
+//     special2.style.color="#f0f";
+//     special2.style.backgroundColor="#0f0";
+// }
+
+// let domData2=()=>{
+//     //Class
+//     //document.getElementsByClassName("parag_class")[0].innerHTML="tiklandı";
+
+//     //TagName
+//     let domUserData=document.getElementsByTagName("p")[1].innerHTML="tiklandı";
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//listener
+let userListener=()=>{
+    let listenerParag=document.getElementById("parag_list");
+    listenerParag.addEventListener("click",function(e){
+        //alert(e.preventDefault() + e.target);
+        //document.getElementById("log_admin").innerHTML="takip ediliyor";
+        $("#log_admin").html("takip ediliyor");
     })
 }
-listenerData();
+userListener();
 
-let eventData=()=>{
-    //ID
-    //let special2=document.getElementById("special2_id");
 
-    //querySelector
-    let special2=document.querySelector(".parag_class");
-    special2.innerHTML="Tıklandı";
-    special2.style.color="#f0f";
-    special2.style.backgroundColor="#0f0";
-}
-
-let domData2=()=>{
-    //Class
-    //document.getElementsByClassName("parag_class")[0].innerHTML="tiklandı";
-
-    //TagName
-    let domUserData=document.getElementsByTagName("p")[1].innerHTML="tiklandı";
-}
 
 
 
