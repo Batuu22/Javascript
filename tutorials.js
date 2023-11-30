@@ -827,6 +827,35 @@ newDataDate=()=>{
     //CSS DOM
     date.style.color="#f00";    //  => classList e ' de bak
 }
+let listenerData=()=>{
+    let text=document.getElementById("parag_id");
+    text.addEventListener("mouseover",function(){
+        let special=document.getElementById("special_id");
+        special.style.color="#00f";
+        special.innerHTML="Üzerine gelindi";
+    })
+}
+listenerData();
+
+let eventData=()=>{
+    //ID
+    //let special2=document.getElementById("special2_id");
+
+    //querySelector
+    let special2=document.querySelector(".parag_class");
+    special2.innerHTML="Tıklandı";
+    special2.style.color="#f0f";
+    special2.style.backgroundColor="#0f0";
+}
+
+let domData2=()=>{
+    //Class
+    //document.getElementsByClassName("parag_class")[0].innerHTML="tiklandı";
+
+    //TagName
+    let domUserData=document.getElementsByTagName("p")[1].innerHTML="tiklandı";
+}
+
 
 
 
