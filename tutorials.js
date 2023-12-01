@@ -860,18 +860,42 @@ let keyDownEvent=()=>{
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //listener
+// Ödev : Kullanıcı bu paragrafa kaç kere tıkladı ?
 let userListener=()=>{
     let listenerParag=document.getElementById("parag_list");
     listenerParag.addEventListener("click",function(e){
         //alert(e.preventDefault() + e.target);
         //document.getElementById("log_admin").innerHTML="takip ediliyor";
-        $("#log_admin").html("takip ediliyor");
+        $("#log_admin").html("takip ediliyor"); // => Jquery
     })
 }
-userListener();
+//userListener();
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//localStorage
+// veriler bizim için önemlidir.
+// verileri saklarız , => database,browser
 
+let localStorageData=()=>{
+    const id=localStorage.setItem("ID",1);
+    const name=localStorage.setItem("name","Batuhan");
+    const surname=localStorage.setItem("Surname","Temel");
+    //console.log(localStorage);
+    //console.log(localStorage.getItem(localStorage.key(0)));
+    //console.log(localStorage.length);
+    const surnameData=localStorage.getItem("Surname");
+    console.log(surnameData);
+    localStorage.removeItem("ID"); // => localStoragedaki bir datayı silmek istersek.
+    console.log(localStorage);
+    localStorage.clear(); // => localStorage daki bütün dataları siler
 
-
+    const localStorageUserName=prompt("İsim giriniz");
+    const localStorageUserSurname=prompt("Soyisim giriniz");
+    localStorage.setItem("Name",localStorageUserName);
+    localStorage.setItem("Surname",localStorageUserSurname);
+}
+//localStorageData();
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//JQuery
 
 
 
