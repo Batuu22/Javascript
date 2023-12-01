@@ -23,6 +23,9 @@
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  <!-- Jquery kütüphanesini dahil etme ekleme -->
+  <!-- <script src="./Jquery3.7.1.js"></script> -->
+
 </head>
 
 <body>
@@ -36,7 +39,7 @@
         <button class="btn btn-danger" onkeyup="keyDownEvent()">keyEvent</button> -->
 
     <!-- paragraph -->
-    <p id="parag_id" class="parag_class" style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur
+    <!-- <p id="parag_id" class="parag_class" style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur
       adipisicing elit. Doloribus nam quibusdam voluptatum, cum, accusamus molestiae, veritatis tempora enim at
       perferendis iste soluta neque quo eos accusantium ex vero earum vel.
       Odio quaerat temporibus necessitatibus, cum consectetur animi ea soluta? Architecto necessitatibus illo fuga
@@ -72,7 +75,7 @@
       natus dolore, dolorum corporis. Eum beatae explicabo praesentium minus! Voluptatem aliquam sit veniam nemo est.
       Temporibus, soluta, nemo blanditiis dolore quasi perspiciatis deleniti voluptas quis molestiae repudiandae unde.
       Neque deleniti, architecto maxime aliquid omnis dolor assumenda modi obcaecati nesciunt iure quibusdam, cupiditate
-      distinctio quis minus.</p>
+      distinctio quis minus.</p> -->
 
     <!-- ask user -->
     <!-- <br/>
@@ -93,6 +96,54 @@
       dolores!</p>
 
     Log Information : <span id="log_admin"></span>
+
+    <hr>
+    <hr>
+
+    <h3>JQUERY</h3>
+    <div id="clickme">
+      Click here
+    </div>
+    <img id="book" src="./img/header.jpg" alt="" width="100" height="123" />
+
+     <!-- With the element initially shown, we can hide it slowly: -->
+     <script>
+    $("#clickme").on("click", function () {
+        $("#book").hide("slow", function () {
+            alert("Animation complete.");
+        });
+    });
+    </script>
+
+    <hr><hr>
+
+    <p id="1">data1</p>
+    <p class="2">data2</p>
+    <p id="3">data3</p>
+    <a href="#" id="anchor_id1">Click to hide me too</a>
+    <br><br>
+
+    <a href="" id="anchor_id2">Buraya tıkla</a>
+    <p id="4">Lorem, ipsum.</p>
+    
+    <script>
+    
+    $( "#anchor_id1" ).on( "click", function( event ) {
+      event.preventDefault();
+      //$( this ).hide();
+      //$( "p" ).hide();
+      $("#1").html("Data 1'e tıklandı").css("color","blue").css("font-size","4rem");
+      $(".2").html("Data 2'ye tıklandı").css("color","#f00").css("background-color","#00f");
+    });
+
+    $("#anchor_id2").on("click",function(event){
+      event.preventDefault();
+      $("#anchor_id2").hide();
+      $("#4").html("Buraya tıklandı").css("color","#0f0").css("background-color","#ff0");
+    })//end
+    </script>
+
+
   </div>
 
   <!-- Bootstrap JavaScript Libraries -->
