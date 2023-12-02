@@ -144,16 +144,16 @@ let splitOrnek = () => {
 // ipucu: charAt, substring, indexOf, döngü,
 
 let maskinWithMethods = () => {
-    let nameAndSurname=prompt("lütfen ad ve soyad giriniz");
-    let indeksNameAndSurname=nameAndSurname.indexOf(" ")
-    let name=nameAndSurname.substring(0,indeksNameAndSurname).toUpperCase();
-    for(let i=1;i<name.length;i++){
-        name=name.replace(name.charAt(i),"*")
+    let nameAndSurname = prompt("lütfen ad ve soyad giriniz");
+    let indeksNameAndSurname = nameAndSurname.indexOf(" ")
+    let name = nameAndSurname.substring(0, indeksNameAndSurname).toUpperCase();
+    for (let i = 1; i < name.length; i++) {
+        name = name.replace(name.charAt(i), "*")
     }
 
-    let surname=nameAndSurname.substring(indeksNameAndSurname+1,nameAndSurname.length).toUpperCase();
-    for(let i=3;i<surname.length;i++){
-        surname=surname.replace(surname.charAt(i),"*");
+    let surname = nameAndSurname.substring(indeksNameAndSurname + 1, nameAndSurname.length).toUpperCase();
+    for (let i = 3; i < surname.length; i++) {
+        surname = surname.replace(surname.charAt(i), "*");
     }
 
     console.log(name.concat(" ").concat(surname));
@@ -181,14 +181,14 @@ bu şarta uyan kaç tane sayı vardır ?
 */
 
 //iterative for
-let randomDizi=()=>{
-    let sayiAdeti=1;
-    const arr=[45,4,7,12,76,34,67,42,12,47];
+let randomDizi = () => {
+    let sayiAdeti = 1;
+    const arr = [45, 4, 7, 12, 76, 34, 67, 42, 12, 47];
     document.writeln("tüm sayılar => " + arr + "<br/>");
-    for(let i=0;i<arr.length;i++){
-        if(arr[i]%2!=0){
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 != 0) {
             document.writeln("tek sayılar => " + arr[i] + "<br/>");
-            document.writeln("tek sayılar 5 ile toplamı => " + Number(arr[i]+5) + "<br/>");
+            document.writeln("tek sayılar 5 ile toplamı => " + Number(arr[i] + 5) + "<br/>");
             document.writeln("bu şarta uyan sayi adeti => " + sayiAdeti + "<br/>");
             sayiAdeti++;
         }
@@ -203,21 +203,21 @@ let randomDizi=()=>{
 //  bu şarta uyan kaç tane sayı vardır ?        
 //  
 
-let randomDizi2=()=>{
-    let adet=0;
-    
-    const arr2=[];
-    for(let i=1;i<=10;i++){
-        arr2.push(parseInt(Math.random()*3+4));
+let randomDizi2 = () => {
+    let adet = 0;
+
+    const arr2 = [];
+    for (let i = 1; i <= 10; i++) {
+        arr2.push(parseInt(Math.random() * 3 + 4));
     }
     // filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S[];
-    let tekSayilar=arr2.filter((value,index,array)=>{
-        return value%2!=0;
+    let tekSayilar = arr2.filter((value, index, array) => {
+        return value % 2 != 0;
     });
     document.writeln(tekSayilar + "<br/>");
     // map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
-    let tekSayilarWith5=tekSayilar.map((value,index,array)=>{
-        return value+5;
+    let tekSayilarWith5 = tekSayilar.map((value, index, array) => {
+        return value + 5;
     })
     document.writeln(tekSayilarWith5 + "<br/>");
 
@@ -225,12 +225,12 @@ let randomDizi2=()=>{
     //     return array;
     // })
 
-    for(let i=0;i<tekSayilarWith5.length;i++){
+    for (let i = 0; i < tekSayilarWith5.length; i++) {
         console.count("sayi adeti =>");
     }
 
-    for(let amount of arr2){
-        if(amount%2!=0){
+    for (let amount of arr2) {
+        if (amount % 2 != 0) {
             console.log(amount);
             adet++;
         }
@@ -240,24 +240,24 @@ let randomDizi2=()=>{
 //randomDizi2();
 
 //ornekCallbackFunction
-let deneme1=(data)=>{
+let deneme1 = (data) => {
     return Math.sqrt(data);
 }
-let deneme2=(callbackFunction)=>{
+let deneme2 = (callbackFunction) => {
     let userData = Number(prompt("bir sayi giriniz"));
     let sonuc = callbackFunction(userData);
-    console.log(sonuc); 
+    console.log(sonuc);
 }
 //deneme2(deneme1);
 ////////////////////////////////////////////////////////////////////////////////////////////////
-let constructorTutorial=()=>{
-    let teaPlant=function (color,height,leafNum){
-        this.color=color;
-        this.height=height;
-        this.leafNum=leafNum;
+let constructorTutorial = () => {
+    let teaPlant = function (color, height, leafNum) {
+        this.color = color;
+        this.height = height;
+        this.leafNum = leafNum;
         console.log(this);
     }
-    let data=new teaPlant("green","50cm",6);
+    let data = new teaPlant("green", "50cm", 6);
     console.log(data);
     console.log(data.color);
     console.log(data["leafNum"]);
@@ -266,35 +266,35 @@ let constructorTutorial=()=>{
 //constructorTutorial();
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //call,apply,bind // => bir fonksiyon dışardan bir objeye nasıl bağlanır.
-let noParamCallApplyBind=()=>{
-    let functionOtherObject=function deneme1(){
+let noParamCallApplyBind = () => {
+    let functionOtherObject = function deneme1() {
         //console.log("Benim satın aldığım bisikletin markası " + this.brand + " fiyatı ise " + this.price + "TL");
         console.log(`Benim satın aldığım bisikletin markası ${this.brand} fiyatı ise ${this.price}TL`); // => interpolation
     }
-    const bicycle={
-        "brand":"Bisan",
-        price:3000,
+    const bicycle = {
+        "brand": "Bisan",
+        price: 3000,
     }
     functionOtherObject.call(bicycle);
     functionOtherObject.apply(bicycle);
-    let sonuc=functionOtherObject.bind(bicycle);
+    let sonuc = functionOtherObject.bind(bicycle);
     sonuc();
 
 }
 //noParamCallApplyBind();
 
-let paramCallApplyBind=()=>{
-    let functionOtherObject2=function(name){
+let paramCallApplyBind = () => {
+    let functionOtherObject2 = function (name) {
         console.log("bu telefon " + name + "a'ait, markası " + this.brand + " fiyatı ise " + this.price);
     }
-    const cellPhone={
-        "brand":"Apple",
-        price:10000,
+    const cellPhone = {
+        "brand": "Apple",
+        price: 10000,
     }
 
-    functionOtherObject2.call(cellPhone,"Batuhan");
-    functionOtherObject2.apply(cellPhone,["Batuhan"]); // => parametreli fonksiyonlar bir objeye bağlanırken, apply() kısmında parametreleri [] dizi içerisinde yollamak zorundasın. aksi takdirde binding yapmaz.
-    let data2=functionOtherObject2.bind(cellPhone,"Batuhan");
+    functionOtherObject2.call(cellPhone, "Batuhan");
+    functionOtherObject2.apply(cellPhone, ["Batuhan"]); // => parametreli fonksiyonlar bir objeye bağlanırken, apply() kısmında parametreleri [] dizi içerisinde yollamak zorundasın. aksi takdirde binding yapmaz.
+    let data2 = functionOtherObject2.bind(cellPhone, "Batuhan");
     data2();
 
 }
@@ -305,9 +305,24 @@ farklı bir sayfaya gitmek istermisiniz ?
 evetse farkli bir sayfaya redirect(yönlensin)
 değilse alert versin */
 
-let askingQuestion=()=>{
-    let userInformation=window.confirm("Farklı bir sayfaya gitmek istermisiniz ?")
-    ? window.location="https://www.google.com/" //redirect
-    : window.alert("Bu sayfada kalındı");
+let askingQuestion = () => {
+    let userInformation = window.confirm("Farklı bir sayfaya gitmek istermisiniz ?")
+        ? window.location = "https://www.google.com/" //redirect
+        : window.alert("Bu sayfada kalındı");
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////
+// Ödev : Kullanıcı bu paragrafa kaç kere tıkladı ?
+let clickingData=()=>{
+    let counter=0;
+    let parag=document.getElementById("parag_click");
+    parag.addEventListener("click",function(e){
+        e.preventDefault();
+        counter++;
+        deneme();
+    })
+    let deneme=function(){
+        let clickedData=document.getElementById("clickResult")
+        clickedData.innerHTML=counter + "'kere tıklandı";
+    }
+}
+//clickingData();
