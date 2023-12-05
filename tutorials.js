@@ -902,7 +902,7 @@ let jqueryKeyProc=()=>{
     $(document).ready(function(){
         $(document).on("keydown",(e)=>{
             e.preventDefault();
-            // console.log(userButton);
+             console.log(e);
             if(e.keyCode==65)
                 console.log("A Harfine bastınız");
             else
@@ -910,9 +910,78 @@ let jqueryKeyProc=()=>{
         })//end keydown
     })//end document ready
 }//end jqueryKeyProc
-jqueryKeyProc();
+//jqueryKeyProc();
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-//VKI (localStorage)
+// VKI (localStorage)
+// kullanıcıdan alınan boy ve kilo verileri formda inputtan alındıktan sonra,
+// Formula: Kilo/((Boy)/100)^2
+// eğer bu formülde;
+// 18>x çıkarsa: Düşük Kilolu (Doktora gidiniz).
+// 18<=x<24 çıkarsa: Normal Kilolu
+// 24<=x<29 çıkarsa: Fazla Kilolu
+// 29<=x<32 çıkarsa: Obez Kilolu
+// x>=32 çıkarsa: Aşırı Obez Kilolu (Doktor gidiniz).
+let vkiExample=()=>{
+    //cleanButton
+    clean=()=>{
+        let height=document.getElementById("height_id");
+        let weight=document.getElementById("weight_id");
+        height.value=null;
+        weight.value=null;
+        document.getElementById("heightSpan_id").innerHTML=null;
+        document.getElementById("weightSpan_id").innerHTML=null;
+    }
+    //cleanLocalStorage
+    cleanLocalStorage=()=>{
+        let cleanLocal=window.confirm("Local Storage'ı gerçekten silmek istiyor musunuz ?");
+        if(cleanLocal){
+            alert("Localstorage silindi");
+            localStorage.clear();
+        }
+        else{
+            alert("İşlem iptal edildi.");
+        }
+    }
+    //Calculating Vki
+    calculateVki=()=>{
+        //height
+        let height_id=document.getElementById("height_id");
+        let height=height_id.value;
+        if(height===""){
+            document.getElementById("heightSpan_id").innerHTML="Bilgiler Boş Geçilemez";
+        }
+        //height to localStorage
+        localStorage.setItem("userHeight",height);
+
+        //weight
+        let weight_id=document.getElementById("weight_id")
+        let weight=weight_id.value;
+        if(weight===""){
+            document.getElementById("weightSpan_id").innerHTML="Bilgiler Boş Geçilemez";
+        }
+        //weight to localStorage
+        localStorage.setItem("userWeight",weight);
+
+        //formula
+        const formula=weight/((height)/100)**2;
+        //Result
+        let result=document.getElementById("result_id");
+
+        switch(true){
+            case formula<18: result.innerHTML=" Düşük Kilolu (Doktora gidiniz)";
+            break;
+            case formula>=18 && formula<24 : result.innerHTML= formula + " Normal Kilolu";
+            break;
+            case formula>=24 && formula<29 : result.innerHTML= formula + " Fazla Kilolu";
+            break;
+            case formula>=29 && formula<32 : result.innerHTML= formula + " Obez Kilolu";
+            break;
+            case formula>=32 : result.innerHTML= formula + " Aşırı Obez Kilolu (Doktora gidiniz)";
+        }
+    }
+}
+//vkiExample();
+ 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //K.D.V HESAPLAMA : JS ve React yapılacak

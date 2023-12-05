@@ -14,6 +14,11 @@
   <meta name="description" content="JavaScript Practice">
   <meta name="keyword" content="Html5,CSS3,Bootstrap,Javascript">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -148,7 +153,63 @@
     <br>
     <span id="clickResult">...</span>
     <p id="parag_key">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dignissimos tempore vel vitae eum maiores ex suscipit, expedita eius laudantium rerum temporibus voluptatem quidem asperiores doloribus iste officia debitis cum.</p> -->
-    
+
+    <button id="vki_id" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#vkiModal_id"
+      style="font-size: 1.5rem;">VKI</button>
+
+    <!-- Modal Body -->
+    <div class="modal fade" id="vkiModal_id" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+      role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitleId" style="font-size: 2rem;">VKI</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Form start -->
+            <form>
+            
+              <!-- Height -->
+              <div class="row">
+                <div class="col-2" style="font-size: 20px;"><b>Boy :</b></div>
+                <div class="col-10">
+                  <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="height_id" class="form-control mb-3" placeholder="Boyunuzu giriniz (orn: 175)" />
+                  </div>
+                  <span id="heightSpan_id" class="text-danger"></span>
+                </div>
+              </div>
+
+              <!-- Weight -->
+              <div class="row">
+                <div class="col-2" style="font-size: 20px;"><b>Kilo :</b></div>
+                <div class="col-10">
+                  <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="weight_id" class="form-control mb-3" placeholder="Kilonuzu giriniz (orn: 76,76.4)" />
+                  </div>
+                  <span id="weightSpan_id" class="text-danger"></span>
+                </div>
+              </div>
+            </form>
+            <!-- Form end -->
+
+            <button class="btn btn-danger" onclick="clean()">Temizle</button>
+            <button type="button" class="btn btn-primary" onclick="calculateVki()">VKI Hesapla</button>
+            <button type="button" class="btn btn-success" onclick="cleanLocalStorage()"><i class="fa-solid fa-trash"></i> localStorage temizle</button>
+            <div class="alert alert-primary mt-3" role="alert">
+              <strong>Result:</strong>
+              <span id="result_id"></span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary">Save</button>
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- Bootstrap JavaScript Libraries -->
