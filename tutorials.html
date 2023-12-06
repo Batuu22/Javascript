@@ -163,19 +163,20 @@
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalTitleId" style="font-size: 2rem;">VKI</h5>
+            <h5 class="modal-title display-5">VKI</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <!-- Form start -->
             <form>
-            
+
               <!-- Height -->
               <div class="row">
                 <div class="col-2" style="font-size: 20px;"><b>Boy :</b></div>
                 <div class="col-10">
                   <div data-mdb-input-init class="form-outline">
-                    <input type="text" id="height_id" class="form-control mb-3" placeholder="Boyunuzu giriniz (orn: 175)" />
+                    <input type="text" id="height_id" name="height_id" class="form-control mb-3"
+                      placeholder="Boyunuzu giriniz (orn: 175)" />
                   </div>
                   <span id="heightSpan_id" class="text-danger"></span>
                 </div>
@@ -186,7 +187,8 @@
                 <div class="col-2" style="font-size: 20px;"><b>Kilo :</b></div>
                 <div class="col-10">
                   <div data-mdb-input-init class="form-outline">
-                    <input type="text" id="weight_id" class="form-control mb-3" placeholder="Kilonuzu giriniz (orn: 76,76.4)" />
+                    <input type="text" id="weight_id" name="weight_id" class="form-control mb-3"
+                      placeholder="Kilonuzu giriniz (orn: 76,76.4)" />
                   </div>
                   <span id="weightSpan_id" class="text-danger"></span>
                 </div>
@@ -194,9 +196,10 @@
             </form>
             <!-- Form end -->
 
-            <button class="btn btn-danger" onclick="clean()">Temizle</button>
-            <button type="button" class="btn btn-primary" onclick="calculateVki()">VKI Hesapla</button>
-            <button type="button" class="btn btn-success" onclick="cleanLocalStorage()"><i class="fa-solid fa-trash"></i> localStorage temizle</button>
+            <input type="reset" class="btn btn-danger" onclick="clean()" value="Temizle" />
+            <button type="submit" class="btn btn-primary" onclick="calculateVki()">VKI Hesapla</button>
+            <button type="button" class="btn btn-success" onclick="cleanLocalStorage()"><i
+                class="fa-solid fa-trash"></i> localStorage temizle</button>
             <div class="alert alert-primary mt-3" role="alert">
               <strong>Result:</strong>
               <span id="result_id"></span>

@@ -898,12 +898,12 @@ let localStorageData = () => {
 //JQuery
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //JQuery hangi tuşa bastım bana söylesin
-let jqueryKeyProc=()=>{
-    $(document).ready(function(){
-        $(document).on("keydown",(e)=>{
+let jqueryKeyProc = () => {
+    $(document).ready(function () {
+        $(document).on("keydown", (e) => {
             e.preventDefault();
-             console.log(e);
-            if(e.keyCode==65)
+            console.log(e);
+            if (e.keyCode == 65)
                 console.log("A Harfine bastınız");
             else
                 console.log("A harfine basmadınız");
@@ -921,67 +921,83 @@ let jqueryKeyProc=()=>{
 // 24<=x<29 çıkarsa: Fazla Kilolu
 // 29<=x<32 çıkarsa: Obez Kilolu
 // x>=32 çıkarsa: Aşırı Obez Kilolu (Doktor gidiniz).
-let vkiExample=()=>{
-    //cleanButton
-    clean=()=>{
-        let height=document.getElementById("height_id");
-        let weight=document.getElementById("weight_id");
-        height.value=null;
-        weight.value=null;
-        document.getElementById("heightSpan_id").innerHTML=null;
-        document.getElementById("weightSpan_id").innerHTML=null;
-    }
-    //cleanLocalStorage
-    cleanLocalStorage=()=>{
-        let cleanLocal=window.confirm("Local Storage'ı gerçekten silmek istiyor musunuz ?");
-        if(cleanLocal){
+
+let vkiExample = () => {
+    // kullanıcı inputlara değer girerse validation kaybolsun!
+    let height_id = document.getElementById("height_id");
+    height_id.addEventListener("keydown", function (e) {
+        document.getElementById("heightSpan_id").innerHTML = null;
+    });
+    // kullanıcı inputlara değer girerse validation kaybolsun!
+    let weight_id = document.getElementById("weight_id");
+    weight_id.addEventListener("keydown", function (e) {
+        document.getElementById("weightSpan_id").innerHTML = null;
+    });
+
+    //event cleanButton
+    clean = () => {
+        let height = document.getElementById("height_id");
+        let weight = document.getElementById("weight_id");
+        height.value = null;
+        weight.value = null;
+        document.getElementById("heightSpan_id").innerHTML = null;
+        document.getElementById("weightSpan_id").innerHTML = null;
+    }//end clean
+
+    //event cleanLocalStorage
+    cleanLocalStorage = () => {
+        let cleanLocal = window.confirm("Local Storage'ı gerçekten silmek istiyor musunuz ?");
+        if (cleanLocal) {
             alert("Localstorage silindi");
             localStorage.clear();
         }
-        else{
+        else {
             alert("İşlem iptal edildi.");
         }
-    }
-    //Calculating Vki
-    calculateVki=()=>{
-        //height
-        let height_id=document.getElementById("height_id");
-        let height=height_id.value;
-        if(height===""){
-            document.getElementById("heightSpan_id").innerHTML="Bilgiler Boş Geçilemez";
+    } //end cleanLocalStorage
+
+    //event Calculating Vki
+    calculateVki = () => {
+        let height, weight, formula, result;
+
+        //height input value
+        height = height_id.value;
+        if (height == "") {
+            document.getElementById("heightSpan_id").innerHTML = "Boy Boş Geçilemez";
         }
         //height to localStorage
-        localStorage.setItem("userHeight",height);
+        localStorage.setItem("userHeight", height);
 
-        //weight
-        let weight_id=document.getElementById("weight_id")
-        let weight=weight_id.value;
-        if(weight===""){
-            document.getElementById("weightSpan_id").innerHTML="Bilgiler Boş Geçilemez";
+        //weight input value
+        weight = weight_id.value;
+        if (weight == "") {
+            document.getElementById("weightSpan_id").innerHTML = "Kilo Boş Geçilemez";
         }
         //weight to localStorage
-        localStorage.setItem("userWeight",weight);
+        localStorage.setItem("userWeight", weight);
 
-        //formula
-        const formula=weight/((height)/100)**2;
+        //vki formula
+        formula = weight / ((height) / 100) ** 2;
+        formula = Math.round(formula);
+        localStorage.setItem("VKI", formula);
         //Result
-        let result=document.getElementById("result_id");
+        result = document.getElementById("result_id");
 
-        switch(true){
-            case formula<18: result.innerHTML=" Düşük Kilolu (Doktora gidiniz)";
-            break;
-            case formula>=18 && formula<24 : result.innerHTML= formula + " Normal Kilolu";
-            break;
-            case formula>=24 && formula<29 : result.innerHTML= formula + " Fazla Kilolu";
-            break;
-            case formula>=29 && formula<32 : result.innerHTML= formula + " Obez Kilolu";
-            break;
-            case formula>=32 : result.innerHTML= formula + " Aşırı Obez Kilolu (Doktora gidiniz)";
+        switch (true) {
+            case formula < 18: result.innerHTML = " Düşük Kilolu (Doktora gidiniz)";
+                break;
+            case formula >= 18 && formula < 24: result.innerHTML = formula + " Normal Kilolu";
+                break;
+            case formula >= 24 && formula < 29: result.innerHTML = formula + " Fazla Kilolu";
+                break;
+            case formula >= 29 && formula < 32: result.innerHTML = formula + " Obez Kilolu";
+                break;
+            case formula >= 32: result.innerHTML = formula + " Aşırı Obez Kilolu (Doktora gidiniz)";
+                break;
         }
-    }
-}
+    } //end calculateVki
+} //end vkiExample
 //vkiExample();
- 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //K.D.V HESAPLAMA : JS ve React yapılacak
